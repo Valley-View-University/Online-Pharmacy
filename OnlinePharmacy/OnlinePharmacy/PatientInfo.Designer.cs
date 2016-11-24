@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtHomeAddress = new System.Windows.Forms.TextBox();
-            this.txtOfficeAddress = new System.Windows.Forms.TextBox();
-            this.txtOccupation = new System.Windows.Forms.TextBox();
+            this.txtHospitalAddress = new System.Windows.Forms.TextBox();
+            this.txtHospitalNumber = new System.Windows.Forms.TextBox();
+            this.txtHospitalName = new System.Windows.Forms.TextBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtMiddleName = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtPatientID = new System.Windows.Forms.TextBox();
-            this.lblHomeAddress = new System.Windows.Forms.Label();
-            this.lblOfficeAddress = new System.Windows.Forms.Label();
-            this.lblOccupation = new System.Windows.Forms.Label();
+            this.lblHospitalAddress = new System.Windows.Forms.Label();
+            this.lblHospitalNumber = new System.Windows.Forms.Label();
+            this.lblHospitalName = new System.Windows.Forms.Label();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
@@ -49,26 +49,26 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtHomeAddress
+            // txtHospitalAddress
             // 
-            this.txtHomeAddress.Location = new System.Drawing.Point(139, 234);
-            this.txtHomeAddress.Name = "txtHomeAddress";
-            this.txtHomeAddress.Size = new System.Drawing.Size(100, 20);
-            this.txtHomeAddress.TabIndex = 35;
+            this.txtHospitalAddress.Location = new System.Drawing.Point(139, 234);
+            this.txtHospitalAddress.Name = "txtHospitalAddress";
+            this.txtHospitalAddress.Size = new System.Drawing.Size(100, 20);
+            this.txtHospitalAddress.TabIndex = 35;
             // 
-            // txtOfficeAddress
+            // txtHospitalNumber
             // 
-            this.txtOfficeAddress.Location = new System.Drawing.Point(139, 205);
-            this.txtOfficeAddress.Name = "txtOfficeAddress";
-            this.txtOfficeAddress.Size = new System.Drawing.Size(100, 20);
-            this.txtOfficeAddress.TabIndex = 34;
+            this.txtHospitalNumber.Location = new System.Drawing.Point(139, 205);
+            this.txtHospitalNumber.Name = "txtHospitalNumber";
+            this.txtHospitalNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtHospitalNumber.TabIndex = 34;
             // 
-            // txtOccupation
+            // txtHospitalName
             // 
-            this.txtOccupation.Location = new System.Drawing.Point(139, 179);
-            this.txtOccupation.Name = "txtOccupation";
-            this.txtOccupation.Size = new System.Drawing.Size(100, 20);
-            this.txtOccupation.TabIndex = 33;
+            this.txtHospitalName.Location = new System.Drawing.Point(139, 179);
+            this.txtHospitalName.Name = "txtHospitalName";
+            this.txtHospitalName.Size = new System.Drawing.Size(100, 20);
+            this.txtHospitalName.TabIndex = 33;
             // 
             // txtPhoneNumber
             // 
@@ -112,32 +112,32 @@
             this.txtPatientID.Size = new System.Drawing.Size(100, 20);
             this.txtPatientID.TabIndex = 27;
             // 
-            // lblHomeAddress
+            // lblHospitalAddress
             // 
-            this.lblHomeAddress.AutoSize = true;
-            this.lblHomeAddress.Location = new System.Drawing.Point(41, 234);
-            this.lblHomeAddress.Name = "lblHomeAddress";
-            this.lblHomeAddress.Size = new System.Drawing.Size(94, 13);
-            this.lblHomeAddress.TabIndex = 26;
-            this.lblHomeAddress.Text = "HOME ADDRESS";
+            this.lblHospitalAddress.AutoSize = true;
+            this.lblHospitalAddress.Location = new System.Drawing.Point(25, 237);
+            this.lblHospitalAddress.Name = "lblHospitalAddress";
+            this.lblHospitalAddress.Size = new System.Drawing.Size(115, 13);
+            this.lblHospitalAddress.TabIndex = 26;
+            this.lblHospitalAddress.Text = "HOSPITAL ADDRESS";
             // 
-            // lblOfficeAddress
+            // lblHospitalNumber
             // 
-            this.lblOfficeAddress.AutoSize = true;
-            this.lblOfficeAddress.Location = new System.Drawing.Point(41, 205);
-            this.lblOfficeAddress.Name = "lblOfficeAddress";
-            this.lblOfficeAddress.Size = new System.Drawing.Size(99, 13);
-            this.lblOfficeAddress.TabIndex = 25;
-            this.lblOfficeAddress.Text = "OFFICE ADDRESS";
+            this.lblHospitalNumber.AutoSize = true;
+            this.lblHospitalNumber.Location = new System.Drawing.Point(30, 205);
+            this.lblHospitalNumber.Name = "lblHospitalNumber";
+            this.lblHospitalNumber.Size = new System.Drawing.Size(110, 13);
+            this.lblHospitalNumber.TabIndex = 25;
+            this.lblHospitalNumber.Text = "HOSPITAL NUMBER";
             // 
-            // lblOccupation
+            // lblHospitalName
             // 
-            this.lblOccupation.AutoSize = true;
-            this.lblOccupation.Location = new System.Drawing.Point(46, 177);
-            this.lblOccupation.Name = "lblOccupation";
-            this.lblOccupation.Size = new System.Drawing.Size(77, 13);
-            this.lblOccupation.TabIndex = 24;
-            this.lblOccupation.Text = "OCCUPATION";
+            this.lblHospitalName.AutoSize = true;
+            this.lblHospitalName.Location = new System.Drawing.Point(46, 177);
+            this.lblHospitalName.Name = "lblHospitalName";
+            this.lblHospitalName.Size = new System.Drawing.Size(94, 13);
+            this.lblHospitalName.TabIndex = 24;
+            this.lblHospitalName.Text = "HOSPITAL NAME";
             // 
             // lblPhoneNumber
             // 
@@ -208,18 +208,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(573, 332);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtHomeAddress);
-            this.Controls.Add(this.txtOfficeAddress);
-            this.Controls.Add(this.txtOccupation);
+            this.Controls.Add(this.txtHospitalAddress);
+            this.Controls.Add(this.txtHospitalNumber);
+            this.Controls.Add(this.txtHospitalName);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.txtAge);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtMiddleName);
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.txtPatientID);
-            this.Controls.Add(this.lblHomeAddress);
-            this.Controls.Add(this.lblOfficeAddress);
-            this.Controls.Add(this.lblOccupation);
+            this.Controls.Add(this.lblHospitalAddress);
+            this.Controls.Add(this.lblHospitalNumber);
+            this.Controls.Add(this.lblHospitalName);
             this.Controls.Add(this.lblPhoneNumber);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblLastName);
@@ -235,18 +235,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtHomeAddress;
-        private System.Windows.Forms.TextBox txtOfficeAddress;
-        private System.Windows.Forms.TextBox txtOccupation;
+        private System.Windows.Forms.TextBox txtHospitalAddress;
+        private System.Windows.Forms.TextBox txtHospitalNumber;
+        private System.Windows.Forms.TextBox txtHospitalName;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtMiddleName;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.TextBox txtPatientID;
-        private System.Windows.Forms.Label lblHomeAddress;
-        private System.Windows.Forms.Label lblOfficeAddress;
-        private System.Windows.Forms.Label lblOccupation;
+        private System.Windows.Forms.Label lblHospitalAddress;
+        private System.Windows.Forms.Label lblHospitalNumber;
+        private System.Windows.Forms.Label lblHospitalName;
         private System.Windows.Forms.Label lblPhoneNumber;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblLastName;

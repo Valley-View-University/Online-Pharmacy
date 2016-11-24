@@ -8,3 +8,6 @@ c:\users\richmond pc\documents\visual studio 2015\Projects\OnlinePharmacy\Online
 c:\users\richmond pc\documents\visual studio 2015\Projects\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.csproj.GenerateResource.Cache
 c:\users\richmond pc\documents\visual studio 2015\Projects\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.exe
 c:\users\richmond pc\documents\visual studio 2015\Projects\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.pdb
+C:\Users\Richmond PC\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\bin\Debug\OnlinePharmacy.exe.config
+C:\Users\Richmond PC\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.exe
+C:\Users\Richmond PC\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.pdb
