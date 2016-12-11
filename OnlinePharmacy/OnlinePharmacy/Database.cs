@@ -16,24 +16,5 @@ namespace OnlinePharmacy
         {
             InitializeComponent();
         }
-
-        private void doctorInfoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.doctorInfoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.oNLINEPHARMACYDataSet);
-
-        }
-
-        private void Database_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.Pharmacy_Info' table. You can move, or remove it, as needed.
-            this.pharmacy_InfoTableAdapter.Fill(this.oNLINEPHARMACYDataSet.Pharmacy_Info);
-            // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.PatientInfo' table. You can move, or remove it, as needed.
-            this.patientInfoTableAdapter.Fill(this.oNLINEPHARMACYDataSet.PatientInfo);
-            // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.DoctorInfo' table. You can move, or remove it, as needed.
-            this.doctorInfoTableAdapter.Fill(this.oNLINEPHARMACYDataSet.DoctorInfo);
-
-        }
     }
 }
