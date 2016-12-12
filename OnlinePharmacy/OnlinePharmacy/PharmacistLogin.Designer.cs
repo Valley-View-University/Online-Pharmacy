@@ -50,9 +50,9 @@
             // 
             this.textBoxPhPassword.Location = new System.Drawing.Point(113, 84);
             this.textBoxPhPassword.Name = "textBoxPhPassword";
-            this.textBoxPhPassword.PasswordChar = '#';
             this.textBoxPhPassword.Size = new System.Drawing.Size(100, 20);
             this.textBoxPhPassword.TabIndex = 5;
+            this.textBoxPhPassword.UseSystemPasswordChar = true;
             // 
             // textBoxPhUsername
             // 

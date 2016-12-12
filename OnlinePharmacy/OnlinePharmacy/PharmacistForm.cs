@@ -35,9 +35,10 @@ namespace OnlinePharmacy
 
         private void buttonVerify_Click(object sender, EventArgs e)
         {
+            textBoxPrescription.Clear();
             SqlDataAdapter sda = new SqlDataAdapter("SELECT Prescription FROM Prescription WHERE AccessID ='" + textBoxCodeVerify.Text + "'", con);
             string Query = "SELECT Prescription FROM Prescription WHERE AccessID ='" + textBoxCodeVerify.Text + "';";
-
+            
             try
             {
                 con.Open();

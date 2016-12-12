@@ -64,9 +64,9 @@
             // 
             this.textBoxDocPassword.Location = new System.Drawing.Point(119, 81);
             this.textBoxDocPassword.Name = "textBoxDocPassword";
-            this.textBoxDocPassword.PasswordChar = '#';
             this.textBoxDocPassword.Size = new System.Drawing.Size(100, 20);
             this.textBoxDocPassword.TabIndex = 1;
+            this.textBoxDocPassword.UseSystemPasswordChar = true;
             // 
             // buttonLogin
             // 

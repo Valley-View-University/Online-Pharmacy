@@ -11,3 +11,16 @@ c:\users\dr. batse\documents\visual studio 2015\Projects\OnlinePharmacy\OnlinePh
 c:\users\dr. batse\documents\visual studio 2015\Projects\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.PatientForm.resources
 c:\users\dr. batse\documents\visual studio 2015\Projects\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.PharmacistLogin.resources
 c:\users\dr. batse\documents\visual studio 2015\Projects\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.PharmacistForm.resources
+C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\bin\Debug\OnlinePharmacy.exe.config
+C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.exe
+C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.pdb
+C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\bin\Debug\OnlinePharmacy.exe
+C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\bin\Debug\OnlinePharmacy.pdb
+C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.csprojResolveAssemblyReference.cache
+C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.Database.resources
+C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.DoctorLogin.resources
+C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.PatientForm.resources
+C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.PharmacistForm.resources
+C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.PharmacistLogin.resources
+C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.Properties.Resources.resources
+C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.csproj.GenerateResource.Cache

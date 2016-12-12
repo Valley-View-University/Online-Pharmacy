@@ -80,6 +80,7 @@ namespace OnlinePharmacy
 
         private void patientIDComboBox_DropDown(object sender, EventArgs e)
         {
+            patientIDComboBox.Items.Clear();
             String query = "SELECT PatientID FROM Prescription ";
 
             con.Open();
@@ -137,7 +138,6 @@ namespace OnlinePharmacy
                 accessIDTextBox.Text = dr[0].ToString();
             }
             con.Close();
-            patientIDComboBox.Items.Clear();
         }
     }
 }

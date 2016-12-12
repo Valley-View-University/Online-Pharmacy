@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label patientIDLabel;
             System.Windows.Forms.Label prescriptionLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientForm));
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label accessIDLabel1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientForm));
             this.oNLINEPHARMACYDataSet = new OnlinePharmacy.ONLINEPHARMACYDataSet();
             this.prescriptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prescriptionTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.PrescriptionTableAdapter();
@@ -85,6 +85,24 @@
             prescriptionLabel.Size = new System.Drawing.Size(65, 13);
             prescriptionLabel.TabIndex = 5;
             prescriptionLabel.Text = "Prescription:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(110, 157);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(38, 13);
+            label1.TabIndex = 10;
+            label1.Text = "Drugs:";
+            // 
+            // accessIDLabel1
+            // 
+            accessIDLabel1.AutoSize = true;
+            accessIDLabel1.Location = new System.Drawing.Point(116, 126);
+            accessIDLabel1.Name = "accessIDLabel1";
+            accessIDLabel1.Size = new System.Drawing.Size(59, 13);
+            accessIDLabel1.TabIndex = 12;
+            accessIDLabel1.Text = "Access ID:";
             // 
             // oNLINEPHARMACYDataSet
             // 
@@ -260,7 +278,6 @@
             this.textBoxPrescription.Location = new System.Drawing.Point(187, 191);
             this.textBoxPrescription.Multiline = true;
             this.textBoxPrescription.Name = "textBoxPrescription";
-            this.textBoxPrescription.ReadOnly = true;
             this.textBoxPrescription.Size = new System.Drawing.Size(187, 106);
             this.textBoxPrescription.TabIndex = 2;
             // 
@@ -274,15 +291,6 @@
             this.linkLabelDatabase.TabStop = true;
             this.linkLabelDatabase.Text = "View Database";
             this.linkLabelDatabase.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelDatabase_LinkClicked);
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(110, 157);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(38, 13);
-            label1.TabIndex = 10;
-            label1.Text = "Drugs:";
             // 
             // comboBoxDrugs
             // 
@@ -309,15 +317,6 @@
             this.linkLabelAddDrug.TabStop = true;
             this.linkLabelAddDrug.Text = "Add to Prescriptions";
             this.linkLabelAddDrug.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAddDrug_LinkClicked);
-            // 
-            // accessIDLabel1
-            // 
-            accessIDLabel1.AutoSize = true;
-            accessIDLabel1.Location = new System.Drawing.Point(116, 126);
-            accessIDLabel1.Name = "accessIDLabel1";
-            accessIDLabel1.Size = new System.Drawing.Size(59, 13);
-            accessIDLabel1.TabIndex = 12;
-            accessIDLabel1.Text = "Access ID:";
             // 
             // accessIDTextBox
             // 
