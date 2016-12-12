@@ -14,24 +14,25 @@ namespace OnlinePharmacy
     public partial class DoctorLogin : Form
     {
         
-        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\v11.0;AttachDbFilename=C: \Users\DR.BATSE\Documents\Visual Studio 2015\ONLINEPHARMACY.mdf;Integrated Security=True");
-        
         public DoctorLogin()
         {
             InitializeComponent();
         }
-
-        private void btnLogin_Click(object sender, EventArgs e)
+        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\v11.0;Initial Catalog=ONLINEPHARMACY;Integrated Security=True");
+        private void buttonLogin_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM DoctorInfo WHERE Username ='" + txtBxDocUsername.Text + "'AND Password ='" + txtBxDocPassword.Text + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM DoctorInfo WHERE Username ='" + textBoxDocUsername.Text + "'AND Password ='" + textBoxDocPassword.Text + "'", con);
+
             try {
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 if (dt.Rows.Count == 1)
                 {
                     MessageBox.Show("Login Successful");
-                    Database stdata = new Database();
-                    stdata.Show();
+                    Hide();
+                    PatientForm stdata = new PatientForm();
+                    stdata.ShowDialog();
+                    Show();
                 }
                 else
                 {
@@ -42,10 +43,7 @@ namespace OnlinePharmacy
             {
                 MessageBox.Show(ex.Message);
             }
-            finally
-            {
-                con.Close();
-            }
+            finally {con.Close();}
         }
     }
 }

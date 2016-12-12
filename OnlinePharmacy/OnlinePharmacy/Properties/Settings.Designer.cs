@@ -26,8 +26,8 @@ namespace OnlinePharmacy.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\v11.0;AttachDbFilename=|DataDirectory|\\ONLINEPHARMACY.mdf;I" +
-            "ntegrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\v11.0;Initial Catalog=ONLINEPHARMACY;Integrated Security=Tr" +
+            "ue")]
         public string ONLINEPHARMACYConnectionString {
             get {
                 return ((string)(this["ONLINEPHARMACYConnectionString"]));
