@@ -27,10 +27,12 @@ namespace OnlinePharmacy
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
         }
-       
+
 
         private void PatientForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.PrescriptionTable' table. You can move, or remove it, as needed.
+            this.prescriptionTableTableAdapter.Fill(this.oNLINEPHARMACYDataSet.PrescriptionTable);
             // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.PatientInfo' table. You can move, or remove it, as needed.
             this.patientInfoTableAdapter.Fill(this.oNLINEPHARMACYDataSet.PatientInfo);
             // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.Prescription' table. You can move, or remove it, as needed.
@@ -40,7 +42,7 @@ namespace OnlinePharmacy
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             SqlDataAdapter sda = new SqlDataAdapter();
-            string Query = "UPDATE PrescriptionTable SET Prescriptions = '" + listBoxPrescriptions.Items.ToString() + "',AccessCode = '"+ accessIDTextBox.Text +"' FROM PatientInfo INNER JOIN PrescriptionTable ON PrescriptionTable.PatientID = PatientInfo.PatientID WHERE PatientName = '"+ patientIDComboBox.Text +"';";
+            string Query = "INSERT INTO PrescriptionTable (Id, PatientID, DoctorID, AccessCode, Prescriptions, PatientName) values('" + patientIDComboBox.Text + "','" + DoctorIDtextbox.Text + "','" + accessIDTextBox.Text + "','" + listBoxPrescriptions.Text + "','" + textBoxPatientName.Text + "');";
             try
             {
                 SqlCommand cmd = new SqlCommand(Query, con);
@@ -76,7 +78,7 @@ namespace OnlinePharmacy
 
             while (dr.Read())
             {
-               // patientIDComboBox.Items.Add(dr[0]);
+                // patientIDComboBox.Items.Add(dr[0]);
             }
             con.Close();
 
@@ -92,20 +94,22 @@ namespace OnlinePharmacy
 
         private void linkLabelAddDrug_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string meal = "", time = "", drug="";
-            if(!radbtnBeforeMeals.Checked && !radbtnAfterMeals.Checked) { MessageBox.Show("Enter the meal time"); }
-            if (radbtnAfterMeals.Checked){ meal = radbtnAfterMeals.Text; }
-            if (radbtnBeforeMeals.Checked){ meal = radbtnBeforeMeals.Text; }
+            string meal = "", time = "", drug = "";
+            if (!radbtnBeforeMeals.Checked && !radbtnAfterMeals.Checked) { MessageBox.Show("Enter the meal time"); }
+            if (radbtnAfterMeals.Checked) { meal = radbtnAfterMeals.Text; }
+            if (radbtnBeforeMeals.Checked) { meal = radbtnBeforeMeals.Text; }
 
-            if (chkbxMorning.Checked){time = chkbxMorning.Text;}if (chkbxAfternoon.Checked){time = chkbxAfternoon.Text;}if (chkbxEvening.Checked){time = chkbxEvening.Text;}
+            if (chkbxMorning.Checked) { time = chkbxMorning.Text; }
+            if (chkbxAfternoon.Checked) { time = chkbxAfternoon.Text; }
+            if (chkbxEvening.Checked) { time = chkbxEvening.Text; }
 
-            if (chkbxMorning.Checked && chkbxAfternoon.Checked){time = chkbxMorning.Text + ", " + chkbxAfternoon.Text;}
-            if (chkbxEvening.Checked && chkbxAfternoon.Checked && chkbxEvening.Checked){time = (chkbxMorning.Text + ", " + chkbxAfternoon.Text + ", " + chkbxEvening.Text);}
-                  
-            if (string.IsNullOrWhiteSpace(comboBoxDrugs.Text)){MessageBox.Show("Select Drug");}
+            if (chkbxMorning.Checked && chkbxAfternoon.Checked) { time = chkbxMorning.Text + ", " + chkbxAfternoon.Text; }
+            if (chkbxEvening.Checked && chkbxAfternoon.Checked && chkbxEvening.Checked) { time = (chkbxMorning.Text + ", " + chkbxAfternoon.Text + ", " + chkbxEvening.Text); }
+
+            if (string.IsNullOrWhiteSpace(comboBoxDrugs.Text)) { MessageBox.Show("Select Drug"); }
             else
             {
-                if (list.Contains(comboBoxDrugs.Text)){}
+                if (list.Contains(comboBoxDrugs.Text)) { }
                 else
                 {
                     list.Add(comboBoxDrugs.Text);
@@ -113,12 +117,12 @@ namespace OnlinePharmacy
                 }
             }
 
-            
+
         }
 
         private void patientIDComboBox_DropDownClosed(object sender, EventArgs e)
         {
-           
+
         }
 
         private void patientIDComboBox_TextChanged(object sender, EventArgs e)
@@ -142,6 +146,24 @@ namespace OnlinePharmacy
         {
             string randomvalue = RandomString(8);
             accessIDTextBox.Text = randomvalue;
+        }
+
+        private void patientIDComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string Query = "SELECT FirstName, MiddleName, LastName FROM PatientInfo WHERE PatientID = '" + patientIDComboBox.Text + "';";
+
+            try {
+                con.Open();
+                SqlCommand cmd = new SqlCommand(Query, con);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    textBoxPatientName.Text = dr["LastName"].ToString() +" "+ dr["FirstName"].ToString() + " " + dr["MiddleName"].ToString();
+                }
+            }
+            catch(Exception ex) { MessageBox.Show(ex.Message); }
+            finally { con.Close(); }
         }
     }
 }
