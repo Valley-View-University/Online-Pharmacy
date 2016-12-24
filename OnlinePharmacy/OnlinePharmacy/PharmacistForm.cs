@@ -18,27 +18,19 @@ namespace OnlinePharmacy
             InitializeComponent();
         }
         SqlConnection con = new SqlConnection(@"Data Source=(localdb)\v11.0;Initial Catalog=ONLINEPHARMACY;Integrated Security=True");
-        private void prescriptionBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.prescriptionBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.oNLINEPHARMACYDataSet);
-
-        }
+       
 
         private void PharmacistForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.Prescription' table. You can move, or remove it, as needed.
-            this.prescriptionTableAdapter.Fill(this.oNLINEPHARMACYDataSet.Prescription);
-
+            
         }
 
         private void buttonVerify_Click(object sender, EventArgs e)
         {
-            textBoxPrescription.Clear();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT Prescription FROM Prescription WHERE AccessID ='" + textBoxCodeVerify.Text + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Prescription WHERE AccessID ='" + textBoxCodeVerify.Text + "'", con);
             string Query = "SELECT Prescription FROM Prescription WHERE AccessID ='" + textBoxCodeVerify.Text + "';";
-            
+            string Query1 = "SELECT PatientID FROM Prescription WHERE AccessID ='" + textBoxCodeVerify.Text + "';";
             try
             {
                 con.Open();
@@ -59,12 +51,28 @@ namespace OnlinePharmacy
                 {
                     textBoxPrescription.AppendText(Environment.NewLine + (dr[0].ToString()));
                 }
+                con.Close();
+
+                con.Open();
+
+                SqlCommand cmd1 = new SqlCommand(Query1, con);
+                SqlDataReader dr1 = cmd1.ExecuteReader();
+
+                while (dr1.Read())
+                {
+                    textBox1.AppendText(Environment.NewLine + (dr1[0].ToString()));
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             finally { con.Close(); }
+        }
+
+        private void prescriptionBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

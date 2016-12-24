@@ -32,30 +32,39 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Database));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageDoctorInfo = new System.Windows.Forms.TabPage();
-            this.tabPagePatientInfo = new System.Windows.Forms.TabPage();
-            this.tabPagePharmacyInfo = new System.Windows.Forms.TabPage();
-            this.doctorInfoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.doctorInfoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.doctorInfoDataGridView = new System.Windows.Forms.DataGridView();
-            this.patientInfoDataGridView = new System.Windows.Forms.DataGridView();
-            this.pharmacyInfoDataGridView = new System.Windows.Forms.DataGridView();
             this.doctorInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.oNLINEPHARMACYDataSet = new OnlinePharmacy.ONLINEPHARMACYDataSet();
+            this.tabPagePatientInfo = new System.Windows.Forms.TabPage();
+            this.tabPagePharmacyInfo = new System.Windows.Forms.TabPage();
+            this.tabPageHospitalInfo = new System.Windows.Forms.TabPage();
+            this.hospitalInfoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hospitalInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patientInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pharmacyInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.doctorInfoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.doctorInfoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.doctorInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.DoctorInfoTableAdapter();
+            this.tableAdapterManager = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.TableAdapterManager();
+            this.patientInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.PatientInfoTableAdapter();
+            this.pharmacyInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.PharmacyInfoTableAdapter();
+            this.hospitalInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.HospitalInfoTableAdapter();
+            this.patientInfoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,42 +75,24 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pharmacyInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.doctorInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.DoctorInfoTableAdapter();
-            this.tableAdapterManager = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.TableAdapterManager();
-            this.patientInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.PatientInfoTableAdapter();
-            this.pharmacyInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.PharmacyInfoTableAdapter();
-            this.tabPagePrescriptionInfo = new System.Windows.Forms.TabPage();
-            this.prescriptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.prescriptionTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.PrescriptionTableAdapter();
-            this.prescriptionDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPageDoctorInfo.SuspendLayout();
-            this.tabPagePatientInfo.SuspendLayout();
-            this.tabPagePharmacyInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.doctorInfoBindingNavigator)).BeginInit();
-            this.doctorInfoBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.doctorInfoDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientInfoDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pharmacyInfoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorInfoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oNLINEPHARMACYDataSet)).BeginInit();
+            this.tabPagePatientInfo.SuspendLayout();
+            this.tabPageHospitalInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitalInfoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitalInfoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientInfoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pharmacyInfoBindingSource)).BeginInit();
-            this.tabPagePrescriptionInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.prescriptionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prescriptionDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorInfoBindingNavigator)).BeginInit();
+            this.doctorInfoBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.patientInfoDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -109,11 +100,12 @@
             this.tabControl1.Controls.Add(this.tabPageDoctorInfo);
             this.tabControl1.Controls.Add(this.tabPagePatientInfo);
             this.tabControl1.Controls.Add(this.tabPagePharmacyInfo);
-            this.tabControl1.Controls.Add(this.tabPagePrescriptionInfo);
-            this.tabControl1.Location = new System.Drawing.Point(1, 3);
+            this.tabControl1.Controls.Add(this.tabPageHospitalInfo);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(522, 291);
+            this.tabControl1.Size = new System.Drawing.Size(774, 408);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPageDoctorInfo
@@ -123,10 +115,39 @@
             this.tabPageDoctorInfo.Location = new System.Drawing.Point(4, 22);
             this.tabPageDoctorInfo.Name = "tabPageDoctorInfo";
             this.tabPageDoctorInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDoctorInfo.Size = new System.Drawing.Size(514, 265);
+            this.tabPageDoctorInfo.Size = new System.Drawing.Size(766, 382);
             this.tabPageDoctorInfo.TabIndex = 0;
             this.tabPageDoctorInfo.Text = "Doctor Info";
             this.tabPageDoctorInfo.UseVisualStyleBackColor = true;
+            // 
+            // doctorInfoDataGridView
+            // 
+            this.doctorInfoDataGridView.AutoGenerateColumns = false;
+            this.doctorInfoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.doctorInfoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11});
+            this.doctorInfoDataGridView.DataSource = this.doctorInfoBindingSource;
+            this.doctorInfoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.doctorInfoDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.doctorInfoDataGridView.Name = "doctorInfoDataGridView";
+            this.doctorInfoDataGridView.Size = new System.Drawing.Size(760, 376);
+            this.doctorInfoDataGridView.TabIndex = 0;
+            // 
+            // doctorInfoBindingSource
+            // 
+            this.doctorInfoBindingSource.DataMember = "DoctorInfo";
+            this.doctorInfoBindingSource.DataSource = this.oNLINEPHARMACYDataSet;
+            // 
+            // oNLINEPHARMACYDataSet
+            // 
+            this.oNLINEPHARMACYDataSet.DataSetName = "ONLINEPHARMACYDataSet";
+            this.oNLINEPHARMACYDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabPagePatientInfo
             // 
@@ -134,20 +155,86 @@
             this.tabPagePatientInfo.Location = new System.Drawing.Point(4, 22);
             this.tabPagePatientInfo.Name = "tabPagePatientInfo";
             this.tabPagePatientInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePatientInfo.Size = new System.Drawing.Size(514, 265);
+            this.tabPagePatientInfo.Size = new System.Drawing.Size(766, 382);
             this.tabPagePatientInfo.TabIndex = 1;
             this.tabPagePatientInfo.Text = "Patient Info";
             this.tabPagePatientInfo.UseVisualStyleBackColor = true;
             // 
             // tabPagePharmacyInfo
             // 
-            this.tabPagePharmacyInfo.Controls.Add(this.pharmacyInfoDataGridView);
             this.tabPagePharmacyInfo.Location = new System.Drawing.Point(4, 22);
             this.tabPagePharmacyInfo.Name = "tabPagePharmacyInfo";
-            this.tabPagePharmacyInfo.Size = new System.Drawing.Size(514, 265);
+            this.tabPagePharmacyInfo.Size = new System.Drawing.Size(766, 357);
             this.tabPagePharmacyInfo.TabIndex = 2;
             this.tabPagePharmacyInfo.Text = "Pharmacy Info";
             this.tabPagePharmacyInfo.UseVisualStyleBackColor = true;
+            // 
+            // tabPageHospitalInfo
+            // 
+            this.tabPageHospitalInfo.AutoScroll = true;
+            this.tabPageHospitalInfo.Controls.Add(this.hospitalInfoDataGridView);
+            this.tabPageHospitalInfo.Location = new System.Drawing.Point(4, 22);
+            this.tabPageHospitalInfo.Name = "tabPageHospitalInfo";
+            this.tabPageHospitalInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageHospitalInfo.Size = new System.Drawing.Size(766, 382);
+            this.tabPageHospitalInfo.TabIndex = 3;
+            this.tabPageHospitalInfo.Text = "Hospital Info";
+            this.tabPageHospitalInfo.UseVisualStyleBackColor = true;
+            // 
+            // hospitalInfoDataGridView
+            // 
+            this.hospitalInfoDataGridView.AutoGenerateColumns = false;
+            this.hospitalInfoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.hospitalInfoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.hospitalInfoDataGridView.DataSource = this.hospitalInfoBindingSource;
+            this.hospitalInfoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hospitalInfoDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.hospitalInfoDataGridView.Name = "hospitalInfoDataGridView";
+            this.hospitalInfoDataGridView.Size = new System.Drawing.Size(760, 376);
+            this.hospitalInfoDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Hospital_Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Hospital_Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "HospitalName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "HospitalName";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "HospitalAddress";
+            this.dataGridViewTextBoxColumn3.HeaderText = "HospitalAddress";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "HospitalPhoneNumber";
+            this.dataGridViewTextBoxColumn4.HeaderText = "HospitalPhoneNumber";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // hospitalInfoBindingSource
+            // 
+            this.hospitalInfoBindingSource.DataMember = "HospitalInfo";
+            this.hospitalInfoBindingSource.DataSource = this.oNLINEPHARMACYDataSet;
+            // 
+            // patientInfoBindingSource
+            // 
+            this.patientInfoBindingSource.DataMember = "PatientInfo";
+            this.patientInfoBindingSource.DataSource = this.oNLINEPHARMACYDataSet;
+            // 
+            // pharmacyInfoBindingSource
+            // 
+            this.pharmacyInfoBindingSource.DataMember = "PharmacyInfo";
+            this.pharmacyInfoBindingSource.DataSource = this.oNLINEPHARMACYDataSet;
             // 
             // doctorInfoBindingNavigator
             // 
@@ -169,16 +256,41 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.doctorInfoBindingNavigatorSaveItem});
-            this.doctorInfoBindingNavigator.Location = new System.Drawing.Point(0, 358);
+            this.doctorInfoBindingNavigator.Location = new System.Drawing.Point(0, 383);
             this.doctorInfoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.doctorInfoBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.doctorInfoBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.doctorInfoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.doctorInfoBindingNavigator.Name = "doctorInfoBindingNavigator";
             this.doctorInfoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.doctorInfoBindingNavigator.Size = new System.Drawing.Size(526, 25);
+            this.doctorInfoBindingNavigator.Size = new System.Drawing.Size(774, 25);
             this.doctorInfoBindingNavigator.TabIndex = 1;
             this.doctorInfoBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -212,16 +324,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -244,26 +349,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // doctorInfoBindingNavigatorSaveItem
             // 
@@ -274,215 +361,6 @@
             this.doctorInfoBindingNavigatorSaveItem.Text = "Save Data";
             this.doctorInfoBindingNavigatorSaveItem.Click += new System.EventHandler(this.doctorInfoBindingNavigatorSaveItem_Click);
             // 
-            // doctorInfoDataGridView
-            // 
-            this.doctorInfoDataGridView.AllowUserToAddRows = false;
-            this.doctorInfoDataGridView.AutoGenerateColumns = false;
-            this.doctorInfoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.doctorInfoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.doctorInfoDataGridView.DataSource = this.doctorInfoBindingSource;
-            this.doctorInfoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.doctorInfoDataGridView.Location = new System.Drawing.Point(3, 3);
-            this.doctorInfoDataGridView.Name = "doctorInfoDataGridView";
-            this.doctorInfoDataGridView.ReadOnly = true;
-            this.doctorInfoDataGridView.Size = new System.Drawing.Size(508, 259);
-            this.doctorInfoDataGridView.TabIndex = 0;
-            // 
-            // patientInfoDataGridView
-            // 
-            this.patientInfoDataGridView.AllowUserToAddRows = false;
-            this.patientInfoDataGridView.AutoGenerateColumns = false;
-            this.patientInfoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.patientInfoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14});
-            this.patientInfoDataGridView.DataSource = this.patientInfoBindingSource;
-            this.patientInfoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.patientInfoDataGridView.Location = new System.Drawing.Point(3, 3);
-            this.patientInfoDataGridView.Name = "patientInfoDataGridView";
-            this.patientInfoDataGridView.ReadOnly = true;
-            this.patientInfoDataGridView.Size = new System.Drawing.Size(508, 259);
-            this.patientInfoDataGridView.TabIndex = 0;
-            // 
-            // pharmacyInfoDataGridView
-            // 
-            this.pharmacyInfoDataGridView.AllowUserToAddRows = false;
-            this.pharmacyInfoDataGridView.AutoGenerateColumns = false;
-            this.pharmacyInfoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pharmacyInfoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn21});
-            this.pharmacyInfoDataGridView.DataSource = this.pharmacyInfoBindingSource;
-            this.pharmacyInfoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pharmacyInfoDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.pharmacyInfoDataGridView.Name = "pharmacyInfoDataGridView";
-            this.pharmacyInfoDataGridView.ReadOnly = true;
-            this.pharmacyInfoDataGridView.Size = new System.Drawing.Size(514, 265);
-            this.pharmacyInfoDataGridView.TabIndex = 0;
-            // 
-            // doctorInfoBindingSource
-            // 
-            this.doctorInfoBindingSource.DataMember = "DoctorInfo";
-            this.doctorInfoBindingSource.DataSource = this.oNLINEPHARMACYDataSet;
-            // 
-            // oNLINEPHARMACYDataSet
-            // 
-            this.oNLINEPHARMACYDataSet.DataSetName = "ONLINEPHARMACYDataSet";
-            this.oNLINEPHARMACYDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "DoctorID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "DoctorID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "FullName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "FullName";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Username";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Username";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Password";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "PatientID";
-            this.dataGridViewTextBoxColumn5.HeaderText = "PatientID";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "FirstName";
-            this.dataGridViewTextBoxColumn6.HeaderText = "FirstName";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "MiddleName";
-            this.dataGridViewTextBoxColumn7.HeaderText = "MiddleName";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "LastName";
-            this.dataGridViewTextBoxColumn8.HeaderText = "LastName";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "DoctorName";
-            this.dataGridViewTextBoxColumn9.HeaderText = "DoctorName";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Age";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Age";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "PhoneNumber";
-            this.dataGridViewTextBoxColumn11.HeaderText = "PhoneNumber";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "HospitalName";
-            this.dataGridViewTextBoxColumn12.HeaderText = "HospitalName";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "HospitalAddress";
-            this.dataGridViewTextBoxColumn13.HeaderText = "HospitalAddress";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "HospitalPhoneNumber";
-            this.dataGridViewTextBoxColumn14.HeaderText = "HospitalPhoneNumber";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // patientInfoBindingSource
-            // 
-            this.patientInfoBindingSource.DataMember = "PatientInfo";
-            this.patientInfoBindingSource.DataSource = this.oNLINEPHARMACYDataSet;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "PharmacyID";
-            this.dataGridViewTextBoxColumn15.HeaderText = "PharmacyID";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "PharmacyName";
-            this.dataGridViewTextBoxColumn16.HeaderText = "PharmacyName";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "PharmacyAddress";
-            this.dataGridViewTextBoxColumn17.HeaderText = "PharmacyAddress";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "PharmacistFullName";
-            this.dataGridViewTextBoxColumn18.HeaderText = "PharmacistFullName";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "Username";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Username";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "Password";
-            this.dataGridViewTextBoxColumn20.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "E-mail";
-            this.dataGridViewTextBoxColumn21.HeaderText = "E-mail";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // pharmacyInfoBindingSource
-            // 
-            this.pharmacyInfoBindingSource.DataMember = "PharmacyInfo";
-            this.pharmacyInfoBindingSource.DataSource = this.oNLINEPHARMACYDataSet;
-            // 
             // doctorInfoTableAdapter
             // 
             this.doctorInfoTableAdapter.ClearBeforeFill = true;
@@ -491,9 +369,9 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.DoctorInfoTableAdapter = this.doctorInfoTableAdapter;
+            this.tableAdapterManager.HospitalInfoTableAdapter = null;
             this.tableAdapterManager.PatientInfoTableAdapter = this.patientInfoTableAdapter;
             this.tableAdapterManager.PharmacyInfoTableAdapter = this.pharmacyInfoTableAdapter;
-            this.tableAdapterManager.PrescriptionTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // patientInfoTableAdapter
@@ -504,65 +382,122 @@
             // 
             this.pharmacyInfoTableAdapter.ClearBeforeFill = true;
             // 
-            // tabPagePrescriptionInfo
+            // hospitalInfoTableAdapter
             // 
-            this.tabPagePrescriptionInfo.AutoScroll = true;
-            this.tabPagePrescriptionInfo.Controls.Add(this.prescriptionDataGridView);
-            this.tabPagePrescriptionInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabPagePrescriptionInfo.Name = "tabPagePrescriptionInfo";
-            this.tabPagePrescriptionInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePrescriptionInfo.Size = new System.Drawing.Size(514, 265);
-            this.tabPagePrescriptionInfo.TabIndex = 3;
-            this.tabPagePrescriptionInfo.Text = "Prescription Info";
-            this.tabPagePrescriptionInfo.UseVisualStyleBackColor = true;
+            this.hospitalInfoTableAdapter.ClearBeforeFill = true;
             // 
-            // prescriptionBindingSource
+            // patientInfoDataGridView
             // 
-            this.prescriptionBindingSource.DataMember = "Prescription";
-            this.prescriptionBindingSource.DataSource = this.oNLINEPHARMACYDataSet;
+            this.patientInfoDataGridView.AutoGenerateColumns = false;
+            this.patientInfoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.patientInfoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18});
+            this.patientInfoDataGridView.DataSource = this.patientInfoBindingSource;
+            this.patientInfoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.patientInfoDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.patientInfoDataGridView.Name = "patientInfoDataGridView";
+            this.patientInfoDataGridView.Size = new System.Drawing.Size(760, 376);
+            this.patientInfoDataGridView.TabIndex = 0;
             // 
-            // prescriptionTableAdapter
+            // dataGridViewTextBoxColumn5
             // 
-            this.prescriptionTableAdapter.ClearBeforeFill = true;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "DoctorID";
+            this.dataGridViewTextBoxColumn5.HeaderText = "DoctorID";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // prescriptionDataGridView
+            // dataGridViewTextBoxColumn6
             // 
-            this.prescriptionDataGridView.AutoGenerateColumns = false;
-            this.prescriptionDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.prescriptionDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn24});
-            this.prescriptionDataGridView.DataSource = this.prescriptionBindingSource;
-            this.prescriptionDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.prescriptionDataGridView.Location = new System.Drawing.Point(3, 3);
-            this.prescriptionDataGridView.Name = "prescriptionDataGridView";
-            this.prescriptionDataGridView.Size = new System.Drawing.Size(508, 259);
-            this.prescriptionDataGridView.TabIndex = 0;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Username";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Username";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // dataGridViewTextBoxColumn22
+            // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "PatientID";
-            this.dataGridViewTextBoxColumn22.HeaderText = "PatientID";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Password";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Password";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
-            // dataGridViewTextBoxColumn23
+            // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "AccessID";
-            this.dataGridViewTextBoxColumn23.HeaderText = "AccessID";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "FirstName";
+            this.dataGridViewTextBoxColumn8.HeaderText = "FirstName";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
-            // dataGridViewTextBoxColumn24
+            // dataGridViewTextBoxColumn9
             // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "Prescription";
-            this.dataGridViewTextBoxColumn24.HeaderText = "Prescription";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "MiddleName";
+            this.dataGridViewTextBoxColumn9.HeaderText = "MiddleName";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "LastName";
+            this.dataGridViewTextBoxColumn10.HeaderText = "LastName";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Hospital_Id";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Hospital_Id";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "PatientID";
+            this.dataGridViewTextBoxColumn12.HeaderText = "PatientID";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "FirstName";
+            this.dataGridViewTextBoxColumn13.HeaderText = "FirstName";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "MiddleName";
+            this.dataGridViewTextBoxColumn14.HeaderText = "MiddleName";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "LastName";
+            this.dataGridViewTextBoxColumn15.HeaderText = "LastName";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "PhoneNumber";
+            this.dataGridViewTextBoxColumn16.HeaderText = "PhoneNumber";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Hospital_Id";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Hospital_Id";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "DoctorID";
+            this.dataGridViewTextBoxColumn18.HeaderText = "DoctorID";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Database
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 383);
+            this.ClientSize = new System.Drawing.Size(774, 408);
             this.Controls.Add(this.doctorInfoBindingNavigator);
             this.Controls.Add(this.tabControl1);
             this.Name = "Database";
@@ -570,21 +505,19 @@
             this.Load += new System.EventHandler(this.Database_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPageDoctorInfo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.doctorInfoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorInfoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oNLINEPHARMACYDataSet)).EndInit();
             this.tabPagePatientInfo.ResumeLayout(false);
-            this.tabPagePharmacyInfo.ResumeLayout(false);
+            this.tabPageHospitalInfo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.hospitalInfoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitalInfoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientInfoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pharmacyInfoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorInfoBindingNavigator)).EndInit();
             this.doctorInfoBindingNavigator.ResumeLayout(false);
             this.doctorInfoBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.doctorInfoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientInfoDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pharmacyInfoDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doctorInfoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.oNLINEPHARMACYDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientInfoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pharmacyInfoBindingSource)).EndInit();
-            this.tabPagePrescriptionInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.prescriptionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prescriptionDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -613,13 +546,19 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton doctorInfoBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView doctorInfoDataGridView;
+        private ONLINEPHARMACYDataSetTableAdapters.PatientInfoTableAdapter patientInfoTableAdapter;
+        private System.Windows.Forms.BindingSource patientInfoBindingSource;
+        private ONLINEPHARMACYDataSetTableAdapters.PharmacyInfoTableAdapter pharmacyInfoTableAdapter;
+        private System.Windows.Forms.BindingSource pharmacyInfoBindingSource;
+        private System.Windows.Forms.TabPage tabPageHospitalInfo;
+        private System.Windows.Forms.BindingSource hospitalInfoBindingSource;
+        private ONLINEPHARMACYDataSetTableAdapters.HospitalInfoTableAdapter hospitalInfoTableAdapter;
+        private System.Windows.Forms.DataGridView hospitalInfoDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private ONLINEPHARMACYDataSetTableAdapters.PatientInfoTableAdapter patientInfoTableAdapter;
-        private System.Windows.Forms.BindingSource patientInfoBindingSource;
+        private System.Windows.Forms.DataGridView doctorInfoDataGridView;
         private System.Windows.Forms.DataGridView patientInfoDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
@@ -631,22 +570,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private ONLINEPHARMACYDataSetTableAdapters.PharmacyInfoTableAdapter pharmacyInfoTableAdapter;
-        private System.Windows.Forms.BindingSource pharmacyInfoBindingSource;
-        private System.Windows.Forms.DataGridView pharmacyInfoDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.TabPage tabPagePrescriptionInfo;
-        private System.Windows.Forms.BindingSource prescriptionBindingSource;
-        private ONLINEPHARMACYDataSetTableAdapters.PrescriptionTableAdapter prescriptionTableAdapter;
-        private System.Windows.Forms.DataGridView prescriptionDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
     }
 }

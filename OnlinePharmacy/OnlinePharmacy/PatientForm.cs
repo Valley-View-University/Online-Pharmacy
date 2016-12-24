@@ -20,41 +20,25 @@ namespace OnlinePharmacy
         List<String> list = new List<string>();
         SqlConnection con = new SqlConnection(@"Data Source=(localdb)\v11.0;Initial Catalog=ONLINEPHARMACY;Integrated Security=True");
 
-        private void patientInfoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private static Random random = new Random();
+        public static string RandomString(int length)
         {
-            this.Validate();
-            this.tableAdapterManager.UpdateAll(this.oNLINEPHARMACYDataSet);
-
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
         }
+        
 
-        private void patientInfoBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.tableAdapterManager.UpdateAll(this.oNLINEPHARMACYDataSet);
-
-        }
-
-        private void prescriptionBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.prescriptionBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.oNLINEPHARMACYDataSet);
-
-        }
+       
 
         private void prescriptionBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
         {
             this.Validate();
-            this.prescriptionBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.oNLINEPHARMACYDataSet);
-
         }
 
         private void PatientForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.Prescription' table. You can move, or remove it, as needed.
-            this.prescriptionTableAdapter.Fill(this.oNLINEPHARMACYDataSet.Prescription);
-
+            
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
@@ -138,6 +122,12 @@ namespace OnlinePharmacy
                 accessIDTextBox.Text = dr[0].ToString();
             }
             con.Close();
+        }
+
+        private void linkLabelGenerateCode_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string randomvalue = RandomString(8);
+            accessIDTextBox.Text = randomvalue;
         }
     }
 }

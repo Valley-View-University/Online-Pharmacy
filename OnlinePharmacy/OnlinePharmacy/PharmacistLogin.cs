@@ -50,7 +50,9 @@ namespace OnlinePharmacy
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             DoctorLogin dl = new DoctorLogin();
+            Hide();
             dl.ShowDialog();
+            Show();
         }
     }
 }
