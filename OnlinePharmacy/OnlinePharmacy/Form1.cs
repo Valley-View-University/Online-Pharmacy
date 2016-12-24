@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using MaterialSkin.Controls;
 
 namespace OnlinePharmacy
 {
-    public partial class DoctorLogin : Form
+    public partial class DoctorLogin : MaterialForm
     {
         
         public DoctorLogin()

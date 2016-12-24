@@ -40,6 +40,7 @@
             this.linkLabelAddDrug = new System.Windows.Forms.LinkLabel();
             this.accessIDTextBox = new System.Windows.Forms.TextBox();
             this.linkLabelGenerateCode = new System.Windows.Forms.LinkLabel();
+            this.textBoxPatientInfo = new System.Windows.Forms.TextBox();
             patientIDLabel = new System.Windows.Forms.Label();
             prescriptionLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -97,7 +98,7 @@
             this.patientIDComboBox.FormattingEnabled = true;
             this.patientIDComboBox.Location = new System.Drawing.Point(189, 89);
             this.patientIDComboBox.Name = "patientIDComboBox";
-            this.patientIDComboBox.Size = new System.Drawing.Size(525, 21);
+            this.patientIDComboBox.Size = new System.Drawing.Size(319, 21);
             this.patientIDComboBox.TabIndex = 0;
             this.patientIDComboBox.DropDown += new System.EventHandler(this.patientIDComboBox_DropDown);
             this.patientIDComboBox.DropDownClosed += new System.EventHandler(this.patientIDComboBox_DropDownClosed);
@@ -122,14 +123,14 @@
             this.textBoxPrescription.Location = new System.Drawing.Point(187, 191);
             this.textBoxPrescription.Multiline = true;
             this.textBoxPrescription.Name = "textBoxPrescription";
-            this.textBoxPrescription.Size = new System.Drawing.Size(525, 106);
+            this.textBoxPrescription.Size = new System.Drawing.Size(319, 106);
             this.textBoxPrescription.TabIndex = 2;
             // 
             // linkLabelDatabase
             // 
             this.linkLabelDatabase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabelDatabase.AutoSize = true;
-            this.linkLabelDatabase.Location = new System.Drawing.Point(720, 67);
+            this.linkLabelDatabase.Location = new System.Drawing.Point(513, 64);
             this.linkLabelDatabase.Name = "linkLabelDatabase";
             this.linkLabelDatabase.Size = new System.Drawing.Size(79, 13);
             this.linkLabelDatabase.TabIndex = 9;
@@ -150,7 +151,7 @@
             "Ha"});
             this.comboBoxDrugs.Location = new System.Drawing.Point(189, 154);
             this.comboBoxDrugs.Name = "comboBoxDrugs";
-            this.comboBoxDrugs.Size = new System.Drawing.Size(525, 21);
+            this.comboBoxDrugs.Size = new System.Drawing.Size(319, 21);
             this.comboBoxDrugs.TabIndex = 2;
             this.comboBoxDrugs.DropDown += new System.EventHandler(this.patientIDComboBox_DropDown);
             // 
@@ -158,7 +159,7 @@
             // 
             this.linkLabelAddDrug.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabelAddDrug.AutoSize = true;
-            this.linkLabelAddDrug.Location = new System.Drawing.Point(720, 157);
+            this.linkLabelAddDrug.Location = new System.Drawing.Point(513, 154);
             this.linkLabelAddDrug.Name = "linkLabelAddDrug";
             this.linkLabelAddDrug.Size = new System.Drawing.Size(101, 13);
             this.linkLabelAddDrug.TabIndex = 3;
@@ -175,7 +176,7 @@
             this.accessIDTextBox.Location = new System.Drawing.Point(189, 119);
             this.accessIDTextBox.Name = "accessIDTextBox";
             this.accessIDTextBox.ReadOnly = true;
-            this.accessIDTextBox.Size = new System.Drawing.Size(525, 29);
+            this.accessIDTextBox.Size = new System.Drawing.Size(319, 29);
             this.accessIDTextBox.TabIndex = 13;
             this.accessIDTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -183,13 +184,24 @@
             // 
             this.linkLabelGenerateCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabelGenerateCode.AutoSize = true;
-            this.linkLabelGenerateCode.Location = new System.Drawing.Point(720, 128);
+            this.linkLabelGenerateCode.Location = new System.Drawing.Point(513, 125);
             this.linkLabelGenerateCode.Name = "linkLabelGenerateCode";
             this.linkLabelGenerateCode.Size = new System.Drawing.Size(79, 13);
             this.linkLabelGenerateCode.TabIndex = 14;
             this.linkLabelGenerateCode.TabStop = true;
             this.linkLabelGenerateCode.Text = "Generate Code";
             this.linkLabelGenerateCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelGenerateCode_LinkClicked);
+            // 
+            // textBoxPatientInfo
+            // 
+            this.textBoxPatientInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxPatientInfo.Location = new System.Drawing.Point(620, 79);
+            this.textBoxPatientInfo.Multiline = true;
+            this.textBoxPatientInfo.Name = "textBoxPatientInfo";
+            this.textBoxPatientInfo.ReadOnly = true;
+            this.textBoxPatientInfo.Size = new System.Drawing.Size(212, 199);
+            this.textBoxPatientInfo.TabIndex = 2;
             // 
             // PatientForm
             // 
@@ -203,14 +215,19 @@
             this.Controls.Add(this.linkLabelAddDrug);
             this.Controls.Add(label1);
             this.Controls.Add(this.linkLabelDatabase);
+            this.Controls.Add(this.textBoxPatientInfo);
             this.Controls.Add(this.textBoxPrescription);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(patientIDLabel);
             this.Controls.Add(this.comboBoxDrugs);
             this.Controls.Add(this.patientIDComboBox);
             this.Controls.Add(prescriptionLabel);
+            this.MaximizeBox = false;
             this.Name = "PatientForm";
-            this.Text = "PatientForm";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Patient Form";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.PatientForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -226,5 +243,6 @@
         private System.Windows.Forms.LinkLabel linkLabelAddDrug;
         private System.Windows.Forms.TextBox accessIDTextBox;
         private System.Windows.Forms.LinkLabel linkLabelGenerateCode;
+        private System.Windows.Forms.TextBox textBoxPatientInfo;
     }
 }

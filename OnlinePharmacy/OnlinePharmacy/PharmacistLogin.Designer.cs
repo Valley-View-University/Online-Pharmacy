@@ -28,61 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonLogin = new System.Windows.Forms.Button();
-            this.textBoxPhPassword = new System.Windows.Forms.TextBox();
-            this.textBoxPhUsername = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.linkLabelDocLogin = new System.Windows.Forms.LinkLabel();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.textBoxPhUsername = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.textBoxPhPassword = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.buttonLogin = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
-            // 
-            // buttonLogin
-            // 
-            this.buttonLogin.Location = new System.Drawing.Point(124, 140);
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(75, 23);
-            this.buttonLogin.TabIndex = 7;
-            this.buttonLogin.Text = "LOG IN";
-            this.buttonLogin.UseVisualStyleBackColor = true;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
-            // 
-            // textBoxPhPassword
-            // 
-            this.textBoxPhPassword.Location = new System.Drawing.Point(113, 84);
-            this.textBoxPhPassword.Name = "textBoxPhPassword";
-            this.textBoxPhPassword.Size = new System.Drawing.Size(100, 20);
-            this.textBoxPhPassword.TabIndex = 5;
-            this.textBoxPhPassword.UseSystemPasswordChar = true;
-            // 
-            // textBoxPhUsername
-            // 
-            this.textBoxPhUsername.Location = new System.Drawing.Point(113, 48);
-            this.textBoxPhUsername.Name = "textBoxPhUsername";
-            this.textBoxPhUsername.Size = new System.Drawing.Size(100, 20);
-            this.textBoxPhUsername.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Password";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Username";
             // 
             // linkLabelDocLogin
             // 
             this.linkLabelDocLogin.AutoSize = true;
-            this.linkLabelDocLogin.Location = new System.Drawing.Point(220, 9);
+            this.linkLabelDocLogin.Location = new System.Drawing.Point(224, 44);
             this.linkLabelDocLogin.Name = "linkLabelDocLogin";
             this.linkLabelDocLogin.Size = new System.Drawing.Size(68, 13);
             this.linkLabelDocLogin.TabIndex = 8;
@@ -90,17 +47,85 @@
             this.linkLabelDocLogin.Text = "Doctor Login";
             this.linkLabelDocLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(8, 114);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(77, 19);
+            this.materialLabel1.TabIndex = 9;
+            this.materialLabel1.Text = "Username";
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(12, 150);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(75, 19);
+            this.materialLabel2.TabIndex = 9;
+            this.materialLabel2.Text = "Password";
+            // 
+            // textBoxPhUsername
+            // 
+            this.textBoxPhUsername.Depth = 0;
+            this.textBoxPhUsername.Hint = "";
+            this.textBoxPhUsername.Location = new System.Drawing.Point(115, 114);
+            this.textBoxPhUsername.MouseState = MaterialSkin.MouseState.HOVER;
+            this.textBoxPhUsername.Name = "textBoxPhUsername";
+            this.textBoxPhUsername.PasswordChar = '\0';
+            this.textBoxPhUsername.SelectedText = "";
+            this.textBoxPhUsername.SelectionLength = 0;
+            this.textBoxPhUsername.SelectionStart = 0;
+            this.textBoxPhUsername.Size = new System.Drawing.Size(148, 23);
+            this.textBoxPhUsername.TabIndex = 10;
+            this.textBoxPhUsername.UseSystemPasswordChar = false;
+            // 
+            // textBoxPhPassword
+            // 
+            this.textBoxPhPassword.Depth = 0;
+            this.textBoxPhPassword.Hint = "";
+            this.textBoxPhPassword.Location = new System.Drawing.Point(115, 150);
+            this.textBoxPhPassword.MouseState = MaterialSkin.MouseState.HOVER;
+            this.textBoxPhPassword.Name = "textBoxPhPassword";
+            this.textBoxPhPassword.PasswordChar = '\0';
+            this.textBoxPhPassword.SelectedText = "";
+            this.textBoxPhPassword.SelectionLength = 0;
+            this.textBoxPhPassword.SelectionStart = 0;
+            this.textBoxPhPassword.Size = new System.Drawing.Size(148, 23);
+            this.textBoxPhPassword.TabIndex = 10;
+            this.textBoxPhPassword.UseSystemPasswordChar = false;
+            // 
+            // buttonLogin
+            // 
+            this.buttonLogin.Depth = 0;
+            this.buttonLogin.Location = new System.Drawing.Point(152, 194);
+            this.buttonLogin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Primary = true;
+            this.buttonLogin.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogin.TabIndex = 11;
+            this.buttonLogin.Text = "log in";
+            this.buttonLogin.UseVisualStyleBackColor = true;
+            // 
             // PharmacistLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 334);
-            this.Controls.Add(this.linkLabelDocLogin);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPhPassword);
             this.Controls.Add(this.textBoxPhUsername);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.materialLabel2);
+            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.linkLabelDocLogin);
             this.Name = "PharmacistLogin";
             this.Text = "PharmacistLogin";
             this.ResumeLayout(false);
@@ -109,12 +134,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonLogin;
-        private System.Windows.Forms.TextBox textBoxPhPassword;
-        private System.Windows.Forms.TextBox textBoxPhUsername;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabelDocLogin;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField textBoxPhUsername;
+        private MaterialSkin.Controls.MaterialSingleLineTextField textBoxPhPassword;
+        private MaterialSkin.Controls.MaterialRaisedButton buttonLogin;
     }
 }

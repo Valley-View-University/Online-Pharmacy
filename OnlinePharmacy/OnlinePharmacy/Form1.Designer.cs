@@ -38,7 +38,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 45);
+            this.label1.Location = new System.Drawing.Point(36, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 0;
@@ -47,7 +47,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 81);
+            this.label2.Location = new System.Drawing.Point(36, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 1;
@@ -55,14 +55,14 @@
             // 
             // textBoxDocUsername
             // 
-            this.textBoxDocUsername.Location = new System.Drawing.Point(119, 45);
+            this.textBoxDocUsername.Location = new System.Drawing.Point(118, 89);
             this.textBoxDocUsername.Name = "textBoxDocUsername";
             this.textBoxDocUsername.Size = new System.Drawing.Size(100, 20);
             this.textBoxDocUsername.TabIndex = 0;
             // 
             // textBoxDocPassword
             // 
-            this.textBoxDocPassword.Location = new System.Drawing.Point(119, 81);
+            this.textBoxDocPassword.Location = new System.Drawing.Point(118, 125);
             this.textBoxDocPassword.Name = "textBoxDocPassword";
             this.textBoxDocPassword.Size = new System.Drawing.Size(100, 20);
             this.textBoxDocPassword.TabIndex = 1;
@@ -70,7 +70,7 @@
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(130, 137);
+            this.buttonLogin.Location = new System.Drawing.Point(129, 181);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(75, 23);
             this.buttonLogin.TabIndex = 2;

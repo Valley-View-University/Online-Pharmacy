@@ -65,7 +65,7 @@ namespace OnlinePharmacy
         private void patientIDComboBox_DropDown(object sender, EventArgs e)
         {
             patientIDComboBox.Items.Clear();
-            String query = "SELECT PatientID FROM Prescription ";
+            String query = "SELECT PatientID FROM PatientInfo";
 
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
@@ -111,7 +111,7 @@ namespace OnlinePharmacy
 
         private void patientIDComboBox_TextChanged(object sender, EventArgs e)
         {
-            String query = "SELECT AccessID FROM Prescription WHERE PatientID = '" + patientIDComboBox.Text + "';";
+            string query = "SELECT FirstName, MiddleNAme, LastName FROM Prescription WHERE PatientID = '" + patientIDComboBox.Text + "';";
 
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
@@ -119,7 +119,9 @@ namespace OnlinePharmacy
 
             while (dr.Read())
             {
-                accessIDTextBox.Text = dr[0].ToString();
+                textBoxPatientInfo.AppendText(Environment.NewLine + ("FIRST NAME:\t\t" + dr[1].ToString()));
+                textBoxPatientInfo.AppendText(Environment.NewLine + ("MIDDLE NAME:\t\t" + dr[2].ToString()));
+                textBoxPatientInfo.AppendText(Environment.NewLine + ("LAST NAME:\t\t" + dr[3].ToString()));
             }
             con.Close();
         }
