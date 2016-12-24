@@ -18,7 +18,7 @@ namespace OnlinePharmacy
             InitializeComponent();
         }
         List<string> list = new List<string>();
-        List<string> timeOfDay = new List<string>();
+
         SqlConnection con = new SqlConnection(@"Data Source=(localdb)\v11.0;Initial Catalog=ONLINEPHARMACY;Integrated Security=True");
 
         private static Random random = new Random();
@@ -31,10 +31,12 @@ namespace OnlinePharmacy
 
         private void PatientForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.PrescriptionTable' table. You can move, or remove it, as needed.
-            this.prescriptionTableTableAdapter.Fill(this.oNLINEPHARMACYDataSet.PrescriptionTable);
             // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.PatientInfo' table. You can move, or remove it, as needed.
             this.patientInfoTableAdapter.Fill(this.oNLINEPHARMACYDataSet.PatientInfo);
+            // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.PrescriptionTable' table. You can move, or remove it, as needed.
+            this.prescriptionTableTableAdapter.Fill(this.oNLINEPHARMACYDataSet.PrescriptionTable);
+            // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.PrescriptionTable' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.PatientInfo' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.Prescription' table. You can move, or remove it, as needed.
 
         }
@@ -42,14 +44,14 @@ namespace OnlinePharmacy
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             SqlDataAdapter sda = new SqlDataAdapter();
-            string Query = "INSERT INTO PrescriptionTable (Id, PatientID, DoctorID, AccessCode, Prescriptions, PatientName) values('" + patientIDComboBox.Text + "','" + DoctorIDtextbox.Text + "','" + accessIDTextBox.Text + "','" + listBoxPrescriptions.Text + "','" + textBoxPatientName.Text + "');";
+            string Query = "INSERT INTO PrescriptionTable (PatientID, AccessCode, Prescriptions, PatientName) values('" + patientIDComboBox.Text + "','" + accessIDTextBox.Text + "','" + textBoxPrescriptions.Text + "','" + textBoxPatientName.Text + "');";
             try
             {
                 SqlCommand cmd = new SqlCommand(Query, con);
                 SqlDataReader myReader;
                 con.Open();
 
-                if (string.IsNullOrWhiteSpace(accessIDTextBox.Text) || string.IsNullOrWhiteSpace(listBoxPrescriptions.Items.ToString()) || string.IsNullOrWhiteSpace(patientIDComboBox.Text))
+                if (string.IsNullOrWhiteSpace(accessIDTextBox.Text) || string.IsNullOrWhiteSpace(textBoxPrescriptions.Text) || string.IsNullOrWhiteSpace(patientIDComboBox.Text))
                 {
                     MessageBox.Show("Some fields are empty");
                 }
@@ -94,7 +96,7 @@ namespace OnlinePharmacy
 
         private void linkLabelAddDrug_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string meal = "", time = "", drug = "";
+            string meal = "", time = "";
             if (!radbtnBeforeMeals.Checked && !radbtnAfterMeals.Checked) { MessageBox.Show("Enter the meal time"); }
             if (radbtnAfterMeals.Checked) { meal = radbtnAfterMeals.Text; }
             if (radbtnBeforeMeals.Checked) { meal = radbtnBeforeMeals.Text; }
@@ -113,7 +115,7 @@ namespace OnlinePharmacy
                 else
                 {
                     list.Add(comboBoxDrugs.Text);
-                    listBoxPrescriptions.Items.Add(comboBoxDrugs.Text + ",\t\t " + meal + ",\t\t " + time);
+                    textBoxPrescriptions.AppendText(comboBoxDrugs.Text + ",\t\t " + meal + ",\t\t " + time + Environment.NewLine);
                 }
             }
 
@@ -146,6 +148,20 @@ namespace OnlinePharmacy
         {
             string randomvalue = RandomString(8);
             accessIDTextBox.Text = randomvalue;
+            /*string query = "DELETE TOP(1) FROM PrescriptionTable WHERE PatientID = 1";
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            finally { con.Close(); }*/
         }
 
         private void patientIDComboBox_SelectedValueChanged(object sender, EventArgs e)

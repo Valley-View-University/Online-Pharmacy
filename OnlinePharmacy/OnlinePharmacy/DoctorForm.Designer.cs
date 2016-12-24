@@ -34,11 +34,10 @@
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label accessIDLabel1;
             System.Windows.Forms.Label label2;
-            System.Windows.Forms.Label label3;
-            System.Windows.Forms.Label idLabel;
             this.patientIDComboBox = new System.Windows.Forms.ComboBox();
             this.patientInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.oNLINEPHARMACYDataSet = new OnlinePharmacy.ONLINEPHARMACYDataSet();
+            this.prescriptionTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.linkLabelDatabase = new System.Windows.Forms.LinkLabel();
             this.comboBoxDrugs = new System.Windows.Forms.ComboBox();
@@ -51,21 +50,15 @@
             this.chkbxEvening = new MaterialSkin.Controls.MaterialCheckBox();
             this.radbtnBeforeMeals = new MaterialSkin.Controls.MaterialRadioButton();
             this.radbtnAfterMeals = new MaterialSkin.Controls.MaterialRadioButton();
-            this.listBoxPrescriptions = new System.Windows.Forms.ListBox();
-            this.patientInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.PatientInfoTableAdapter();
             this.textBoxPatientName = new System.Windows.Forms.TextBox();
-            this.DoctorIDtextbox = new System.Windows.Forms.TextBox();
-            this.prescriptionTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prescriptionTableTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.PrescriptionTableTableAdapter();
-            this.tableAdapterManager = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.TableAdapterManager();
-            this.idLabel1 = new System.Windows.Forms.Label();
+            this.patientInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.PatientInfoTableAdapter();
+            this.textBoxPrescriptions = new System.Windows.Forms.TextBox();
             patientIDLabel = new System.Windows.Forms.Label();
             prescriptionLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             accessIDLabel1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
-            label3 = new System.Windows.Forms.Label();
-            idLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.patientInfoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oNLINEPHARMACYDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prescriptionTableBindingSource)).BeginInit();
@@ -126,17 +119,6 @@
             label2.TabIndex = 1;
             label2.Text = "Patient Name:";
             // 
-            // label3
-            // 
-            label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(12, 26);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(56, 13);
-            label3.TabIndex = 1;
-            label3.Text = "Doctor ID:";
-            // 
             // patientIDComboBox
             // 
             this.patientIDComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -165,6 +147,11 @@
             // 
             this.oNLINEPHARMACYDataSet.DataSetName = "ONLINEPHARMACYDataSet";
             this.oNLINEPHARMACYDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // prescriptionTableBindingSource
+            // 
+            this.prescriptionTableBindingSource.DataMember = "PrescriptionTable";
+            this.prescriptionTableBindingSource.DataSource = this.oNLINEPHARMACYDataSet;
             // 
             // buttonSubmit
             // 
@@ -337,18 +324,6 @@
             this.radbtnAfterMeals.Text = "After Meals";
             this.radbtnAfterMeals.UseVisualStyleBackColor = true;
             // 
-            // listBoxPrescriptions
-            // 
-            this.listBoxPrescriptions.FormattingEnabled = true;
-            this.listBoxPrescriptions.Location = new System.Drawing.Point(180, 298);
-            this.listBoxPrescriptions.Name = "listBoxPrescriptions";
-            this.listBoxPrescriptions.Size = new System.Drawing.Size(618, 95);
-            this.listBoxPrescriptions.TabIndex = 17;
-            // 
-            // patientInfoTableAdapter
-            // 
-            this.patientInfoTableAdapter.ClearBeforeFill = true;
-            // 
             // textBoxPatientName
             // 
             this.textBoxPatientName.Location = new System.Drawing.Point(189, 93);
@@ -356,49 +331,21 @@
             this.textBoxPatientName.Size = new System.Drawing.Size(319, 20);
             this.textBoxPatientName.TabIndex = 18;
             // 
-            // DoctorIDtextbox
-            // 
-            this.DoctorIDtextbox.Location = new System.Drawing.Point(74, 23);
-            this.DoctorIDtextbox.Name = "DoctorIDtextbox";
-            this.DoctorIDtextbox.Size = new System.Drawing.Size(67, 20);
-            this.DoctorIDtextbox.TabIndex = 18;
-            // 
-            // prescriptionTableBindingSource
-            // 
-            this.prescriptionTableBindingSource.DataMember = "PrescriptionTable";
-            this.prescriptionTableBindingSource.DataSource = this.oNLINEPHARMACYDataSet;
-            // 
             // prescriptionTableTableAdapter
             // 
             this.prescriptionTableTableAdapter.ClearBeforeFill = true;
             // 
-            // tableAdapterManager
+            // patientInfoTableAdapter
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DoctorInfoTableAdapter = null;
-            this.tableAdapterManager.HospitalInfoTableAdapter = null;
-            this.tableAdapterManager.PatientInfoTableAdapter = this.patientInfoTableAdapter;
-            this.tableAdapterManager.PharmacyInfoTableAdapter = null;
-            this.tableAdapterManager.PrescriptionTableTableAdapter = this.prescriptionTableTableAdapter;
-            this.tableAdapterManager.UpdateOrder = OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.patientInfoTableAdapter.ClearBeforeFill = true;
             // 
-            // idLabel
+            // textBoxPrescriptions
             // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(208, 26);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 22;
-            idLabel.Text = "Id:";
-            // 
-            // idLabel1
-            // 
-            this.idLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prescriptionTableBindingSource, "Id", true));
-            this.idLabel1.Location = new System.Drawing.Point(233, 26);
-            this.idLabel1.Name = "idLabel1";
-            this.idLabel1.Size = new System.Drawing.Size(100, 23);
-            this.idLabel1.TabIndex = 23;
-            this.idLabel1.Text = "label4";
+            this.textBoxPrescriptions.Location = new System.Drawing.Point(189, 298);
+            this.textBoxPrescriptions.Multiline = true;
+            this.textBoxPrescriptions.Name = "textBoxPrescriptions";
+            this.textBoxPrescriptions.Size = new System.Drawing.Size(640, 134);
+            this.textBoxPrescriptions.TabIndex = 19;
             // 
             // DoctorForm
             // 
@@ -406,11 +353,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(841, 489);
-            this.Controls.Add(idLabel);
-            this.Controls.Add(this.idLabel1);
-            this.Controls.Add(this.DoctorIDtextbox);
+            this.Controls.Add(this.textBoxPrescriptions);
             this.Controls.Add(this.textBoxPatientName);
-            this.Controls.Add(this.listBoxPrescriptions);
             this.Controls.Add(this.radbtnAfterMeals);
             this.Controls.Add(this.radbtnBeforeMeals);
             this.Controls.Add(this.chkbxEvening);
@@ -424,7 +368,6 @@
             this.Controls.Add(this.linkLabelDatabase);
             this.Controls.Add(this.textBoxPatientInfo);
             this.Controls.Add(this.buttonSubmit);
-            this.Controls.Add(label3);
             this.Controls.Add(label2);
             this.Controls.Add(patientIDLabel);
             this.Controls.Add(this.comboBoxDrugs);
@@ -459,15 +402,12 @@
         private MaterialSkin.Controls.MaterialCheckBox chkbxEvening;
         private MaterialSkin.Controls.MaterialRadioButton radbtnBeforeMeals;
         private MaterialSkin.Controls.MaterialRadioButton radbtnAfterMeals;
-        private System.Windows.Forms.ListBox listBoxPrescriptions;
-        private ONLINEPHARMACYDataSet oNLINEPHARMACYDataSet;
-        private System.Windows.Forms.BindingSource patientInfoBindingSource;
-        private ONLINEPHARMACYDataSetTableAdapters.PatientInfoTableAdapter patientInfoTableAdapter;
         private System.Windows.Forms.TextBox textBoxPatientName;
-        private System.Windows.Forms.TextBox DoctorIDtextbox;
+        private ONLINEPHARMACYDataSet oNLINEPHARMACYDataSet;
         private System.Windows.Forms.BindingSource prescriptionTableBindingSource;
         private ONLINEPHARMACYDataSetTableAdapters.PrescriptionTableTableAdapter prescriptionTableTableAdapter;
-        private ONLINEPHARMACYDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.Label idLabel1;
+        private System.Windows.Forms.BindingSource patientInfoBindingSource;
+        private ONLINEPHARMACYDataSetTableAdapters.PatientInfoTableAdapter patientInfoTableAdapter;
+        private System.Windows.Forms.TextBox textBoxPrescriptions;
     }
 }
