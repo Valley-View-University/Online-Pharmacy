@@ -38,7 +38,7 @@ namespace OnlinePharmacy
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             SqlDataAdapter sda = new SqlDataAdapter();
-            string Query = "UPDATE Table SET Prescriptions = '" + listBoxPrescriptions.Items.ToString() + "',AccessID = '"+ accessIDTextBox.Text +"' WHERE PatientID = '"+ patientIDComboBox.Text +"';";
+            string Query = "UPDATE PrescriptionTable SET Prescriptions = '" + listBoxPrescriptions.Items.ToString() + "',AccessCode = '"+ accessIDTextBox.Text +"' WHERE PatientID = '"+ patientIDComboBox.Text +"';";
             try
             {
                 SqlCommand cmd = new SqlCommand(Query, con);
