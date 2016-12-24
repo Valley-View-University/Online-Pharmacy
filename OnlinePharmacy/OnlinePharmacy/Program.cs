@@ -16,7 +16,7 @@ namespace OnlinePharmacy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PharmacistForm());
+            Application.Run(new DoctorLogin());
         }
     }
 }

@@ -20,31 +20,48 @@ namespace OnlinePharmacy
             InitializeComponent();
         }
         SqlConnection con = new SqlConnection(@"Data Source=(localdb)\v11.0;Initial Catalog=ONLINEPHARMACY;Integrated Security=True");
+
+        public static int HospitalID;
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            string Query = "SELECT * FROM DoctorInfo WHERE Username like'" + textBoxDocUsername.Text + "'AND Password like'" + textBoxDocPassword.Text + "';";
             SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM DoctorInfo WHERE Username ='" + textBoxDocUsername.Text + "'AND Password ='" + textBoxDocPassword.Text + "'", con);
 
-            try {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand(Query, con);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    HospitalID = int.Parse(dr["Hospital_Id"].ToString());
+                }
+                con.Close();
+                con.Open();
                 DataTable dt = new DataTable();
+
                 sda.Fill(dt);
                 if (dt.Rows.Count == 1)
                 {
                     MessageBox.Show("Login Successful");
                     Hide();
-                    DoctorForm stdata = new DoctorForm();
-                    stdata.ShowDialog();
+                    DoctorForm doc = new DoctorForm();
+                    doc.ShowDialog();
                     Show();
                 }
                 else
                 {
                     MessageBox.Show("ID or password invalid");
                 }
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             finally {con.Close();}
         }
+        
     }
 }

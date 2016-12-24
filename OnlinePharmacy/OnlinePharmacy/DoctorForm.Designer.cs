@@ -54,6 +54,8 @@
             this.prescriptionTableTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.PrescriptionTableTableAdapter();
             this.patientInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.PatientInfoTableAdapter();
             this.textBoxPrescriptions = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.linkLabelLogOut = new System.Windows.Forms.LinkLabel();
             patientIDLabel = new System.Windows.Forms.Label();
             prescriptionLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -169,6 +171,7 @@
             // 
             this.linkLabelDatabase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabelDatabase.AutoSize = true;
+            this.linkLabelDatabase.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.linkLabelDatabase.Location = new System.Drawing.Point(719, 26);
             this.linkLabelDatabase.Name = "linkLabelDatabase";
             this.linkLabelDatabase.Size = new System.Drawing.Size(79, 13);
@@ -347,6 +350,25 @@
             this.textBoxPrescriptions.Size = new System.Drawing.Size(640, 134);
             this.textBoxPrescriptions.TabIndex = 19;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(176, 13);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 20;
+            // 
+            // linkLabelLogOut
+            // 
+            this.linkLabelLogOut.AutoSize = true;
+            this.linkLabelLogOut.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.linkLabelLogOut.Location = new System.Drawing.Point(13, 19);
+            this.linkLabelLogOut.Name = "linkLabelLogOut";
+            this.linkLabelLogOut.Size = new System.Drawing.Size(55, 13);
+            this.linkLabelLogOut.TabIndex = 21;
+            this.linkLabelLogOut.TabStop = true;
+            this.linkLabelLogOut.Text = "LOG OUT";
+            this.linkLabelLogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLogOut_LinkClicked);
+            // 
             // DoctorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,6 +376,8 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(841, 489);
             this.ControlBox = false;
+            this.Controls.Add(this.linkLabelLogOut);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBoxPrescriptions);
             this.Controls.Add(this.textBoxPatientName);
             this.Controls.Add(this.radbtnAfterMeals);
@@ -410,5 +434,7 @@
         private System.Windows.Forms.BindingSource patientInfoBindingSource;
         private ONLINEPHARMACYDataSetTableAdapters.PatientInfoTableAdapter patientInfoTableAdapter;
         private System.Windows.Forms.TextBox textBoxPrescriptions;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.LinkLabel linkLabelLogOut;
     }
 }

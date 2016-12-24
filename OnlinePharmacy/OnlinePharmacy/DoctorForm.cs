@@ -31,6 +31,8 @@ namespace OnlinePharmacy
 
         private void PatientForm_Load(object sender, EventArgs e)
         {
+            textBox1.Text = DoctorLogin.HospitalID.ToString();
+            
             // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.PatientInfo' table. You can move, or remove it, as needed.
             this.patientInfoTableAdapter.Fill(this.oNLINEPHARMACYDataSet.PatientInfo);
             // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.PrescriptionTable' table. You can move, or remove it, as needed.
@@ -40,11 +42,13 @@ namespace OnlinePharmacy
             // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.Prescription' table. You can move, or remove it, as needed.
 
         }
-
+        
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
+            DoctorLogin doclog = new DoctorLogin();
+            int ID = int.Parse(textBox1.Text);
             SqlDataAdapter sda = new SqlDataAdapter();
-            string Query = "INSERT INTO PrescriptionTable (PatientID, AccessCode, Prescriptions, PatientName) values('" + patientIDComboBox.Text + "','" + accessIDTextBox.Text + "','" + textBoxPrescriptions.Text + "','" + textBoxPatientName.Text + "');";
+            string Query = "INSERT INTO PrescriptionTable (PatientID, AccessCode, Prescriptions, PatientName, HospitalID) values('" + patientIDComboBox.Text + "','" + accessIDTextBox.Text + "','" + textBoxPrescriptions.Text + "','" + textBoxPatientName.Text + "','"+ ID +"');";
             try
             {
                 SqlCommand cmd = new SqlCommand(Query, con);
@@ -180,6 +184,11 @@ namespace OnlinePharmacy
             }
             catch(Exception ex) { MessageBox.Show(ex.Message); }
             finally { con.Close(); }
+        }
+
+        private void linkLabelLogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Close();
         }
     }
 }
