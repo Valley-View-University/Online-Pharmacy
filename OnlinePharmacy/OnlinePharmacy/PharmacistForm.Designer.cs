@@ -32,9 +32,10 @@
             System.Windows.Forms.Label prescriptionLabel;
             this.textBoxCodeVerify = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxPrescription = new System.Windows.Forms.TextBox();
             this.textBoxInformation = new System.Windows.Forms.TextBox();
             this.buttonVerify = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.linkLabelPrint = new System.Windows.Forms.LinkLabel();
+            this.listBoxPrescriptions = new System.Windows.Forms.ListBox();
             patientIDLabel = new System.Windows.Forms.Label();
             prescriptionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -74,15 +75,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "CODE:";
             // 
-            // textBoxPrescription
-            // 
-            this.textBoxPrescription.Location = new System.Drawing.Point(143, 222);
-            this.textBoxPrescription.Multiline = true;
-            this.textBoxPrescription.Name = "textBoxPrescription";
-            this.textBoxPrescription.ReadOnly = true;
-            this.textBoxPrescription.Size = new System.Drawing.Size(247, 109);
-            this.textBoxPrescription.TabIndex = 1;
-            // 
             // textBoxInformation
             // 
             this.textBoxInformation.BackColor = System.Drawing.SystemColors.Info;
@@ -90,7 +82,7 @@
             this.textBoxInformation.Multiline = true;
             this.textBoxInformation.Name = "textBoxInformation";
             this.textBoxInformation.ReadOnly = true;
-            this.textBoxInformation.Size = new System.Drawing.Size(247, 112);
+            this.textBoxInformation.Size = new System.Drawing.Size(306, 112);
             this.textBoxInformation.TabIndex = 1;
             // 
             // buttonVerify
@@ -106,17 +98,36 @@
             this.buttonVerify.UseVisualStyleBackColor = true;
             this.buttonVerify.Click += new System.EventHandler(this.buttonVerify_Click_1);
             // 
+            // linkLabelPrint
+            // 
+            this.linkLabelPrint.AutoSize = true;
+            this.linkLabelPrint.Location = new System.Drawing.Point(220, 348);
+            this.linkLabelPrint.Name = "linkLabelPrint";
+            this.linkLabelPrint.Size = new System.Drawing.Size(82, 13);
+            this.linkLabelPrint.TabIndex = 8;
+            this.linkLabelPrint.TabStop = true;
+            this.linkLabelPrint.Text = "Print information";
+            // 
+            // listBoxPrescriptions
+            // 
+            this.listBoxPrescriptions.FormattingEnabled = true;
+            this.listBoxPrescriptions.Location = new System.Drawing.Point(143, 222);
+            this.listBoxPrescriptions.Name = "listBoxPrescriptions";
+            this.listBoxPrescriptions.Size = new System.Drawing.Size(306, 121);
+            this.listBoxPrescriptions.TabIndex = 9;
+            // 
             // PharmacistForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(438, 370);
+            this.ClientSize = new System.Drawing.Size(606, 370);
+            this.Controls.Add(this.listBoxPrescriptions);
+            this.Controls.Add(this.linkLabelPrint);
             this.Controls.Add(this.buttonVerify);
             this.Controls.Add(patientIDLabel);
             this.Controls.Add(prescriptionLabel);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxPrescription);
             this.Controls.Add(this.textBoxInformation);
             this.Controls.Add(this.textBoxCodeVerify);
             this.Name = "PharmacistForm";
@@ -131,8 +142,9 @@
 
         private System.Windows.Forms.TextBox textBoxCodeVerify;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxPrescription;
         private System.Windows.Forms.TextBox textBoxInformation;
         private MaterialSkin.Controls.MaterialRaisedButton buttonVerify;
+        private System.Windows.Forms.LinkLabel linkLabelPrint;
+        private System.Windows.Forms.ListBox listBoxPrescriptions;
     }
 }

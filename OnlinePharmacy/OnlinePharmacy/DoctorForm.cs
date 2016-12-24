@@ -31,23 +31,32 @@ namespace OnlinePharmacy
 
         private void PatientForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.PatientInfo' table. You can move, or remove it, as needed.
+            this.patientInfoTableAdapter.Fill(this.oNLINEPHARMACYDataSet.PatientInfo);
             // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.Prescription' table. You can move, or remove it, as needed.
-            
+
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             SqlDataAdapter sda = new SqlDataAdapter();
-            string Query = "UPDATE PrescriptionTable SET Prescriptions = '" + listBoxPrescriptions.Items.ToString() + "',AccessCode = '"+ accessIDTextBox.Text +"' WHERE PatientID = '"+ patientIDComboBox.Text +"';";
+            string Query = "UPDATE PrescriptionTable SET Prescriptions = '" + listBoxPrescriptions.Items.ToString() + "',AccessCode = '"+ accessIDTextBox.Text +"' FROM PatientInfo INNER JOIN PrescriptionTable ON PrescriptionTable.PatientID = PatientInfo.PatientID WHERE PatientName = '"+ patientIDComboBox.Text +"';";
             try
             {
                 SqlCommand cmd = new SqlCommand(Query, con);
                 SqlDataReader myReader;
                 con.Open();
 
-                myReader = cmd.ExecuteReader();
-                MessageBox.Show("Data Submitted");
-                while (myReader.Read()){}
+                if (string.IsNullOrWhiteSpace(accessIDTextBox.Text) || string.IsNullOrWhiteSpace(listBoxPrescriptions.Items.ToString()) || string.IsNullOrWhiteSpace(patientIDComboBox.Text))
+                {
+                    MessageBox.Show("Some fields are empty");
+                }
+                else
+                {
+                    myReader = cmd.ExecuteReader();
+                    MessageBox.Show("Data Submitted");
+                    while (myReader.Read()) { }
+                }
             }
             catch (Exception ex)
             {
@@ -58,7 +67,7 @@ namespace OnlinePharmacy
 
         private void patientIDComboBox_DropDown(object sender, EventArgs e)
         {
-            patientIDComboBox.Items.Clear();
+            //patientIDComboBox.Items.Clear();
             String query = "SELECT PatientID FROM PatientInfo";
 
             con.Open();
@@ -67,7 +76,7 @@ namespace OnlinePharmacy
 
             while (dr.Read())
             {
-                patientIDComboBox.Items.Add(dr[0]);
+               // patientIDComboBox.Items.Add(dr[0]);
             }
             con.Close();
 
@@ -88,23 +97,12 @@ namespace OnlinePharmacy
             if (radbtnAfterMeals.Checked){ meal = radbtnAfterMeals.Text; }
             if (radbtnBeforeMeals.Checked){ meal = radbtnBeforeMeals.Text; }
 
-            if (chkbxMorning.Checked)
-            {
-                time = chkbxMorning.Text;
-            }
-            if (chkbxAfternoon.Checked && chkbxAfternoon.Checked)
-            {
-                time = chkbxMorning.Text + ", " + chkbxAfternoon.Text;
-            }
-            if (chkbxEvening.Checked && chkbxAfternoon.Checked && chkbxEvening.Checked)
-            {
-                time = (chkbxMorning.Text + ", " + chkbxAfternoon.Text + ", " + chkbxEvening.Text);
-            }
+            if (chkbxMorning.Checked){time = chkbxMorning.Text;}if (chkbxAfternoon.Checked){time = chkbxAfternoon.Text;}if (chkbxEvening.Checked){time = chkbxEvening.Text;}
+
+            if (chkbxMorning.Checked && chkbxAfternoon.Checked){time = chkbxMorning.Text + ", " + chkbxAfternoon.Text;}
+            if (chkbxEvening.Checked && chkbxAfternoon.Checked && chkbxEvening.Checked){time = (chkbxMorning.Text + ", " + chkbxAfternoon.Text + ", " + chkbxEvening.Text);}
                   
-            if (string.IsNullOrWhiteSpace(comboBoxDrugs.Text))
-            {
-                MessageBox.Show("Select Drug");
-            }
+            if (string.IsNullOrWhiteSpace(comboBoxDrugs.Text)){MessageBox.Show("Select Drug");}
             else
             {
                 if (list.Contains(comboBoxDrugs.Text)){}
@@ -125,7 +123,7 @@ namespace OnlinePharmacy
 
         private void patientIDComboBox_TextChanged(object sender, EventArgs e)
         {
-            string query = "SELECT FirstName, MiddleNAme, LastName FROM Prescription WHERE PatientID = '" + patientIDComboBox.Text + "';";
+            /*string query = "SELECT FirstName, MiddleNAme, LastName FROM Prescription WHERE PatientID = '" + patientIDComboBox.Text + "';";
 
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
@@ -137,7 +135,7 @@ namespace OnlinePharmacy
                 textBoxPatientInfo.AppendText(Environment.NewLine + ("MIDDLE NAME:\t\t" + dr[2].ToString()));
                 textBoxPatientInfo.AppendText(Environment.NewLine + ("LAST NAME:\t\t" + dr[3].ToString()));
             }
-            con.Close();
+            con.Close();*/
         }
 
         private void linkLabelGenerateCode_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

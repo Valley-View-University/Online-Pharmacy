@@ -28,9 +28,9 @@ namespace OnlinePharmacy
 
         private void buttonVerify_Click_1(object sender, EventArgs e)
         {
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Prescription WHERE AccessID ='" + textBoxCodeVerify.Text + "'", con);
-            string Query = "SELECT AccessCode, HospitalName, HospitalAddress, HospitalPhoneNumber FROM Table, HospitalInfo WHERE Table.HospitalID = HospitalInfo.HospitalID AND WHERE AccessCode = '" + textBoxCodeVerify.Text + "';";
-            string Query1 = "SELECT Prescription FROM Prescription WHERE AccessID ='" + textBoxCodeVerify.Text + "';";
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM PrescriptionTable WHERE AccessCode ='" + textBoxCodeVerify.Text + "'", con);
+            string Query = "SELECT HospitalName, HospitalAddress, HospitalPhoneNumber, AccessCode FROM HospitalInfo, PrescriptionTable WHERE PrescriptionTable.HospitalID = HospitalInfo.Hospital_Id AND AccessCode = '" + textBoxCodeVerify.Text + "';";
+            string Query1 = "SELECT Drugs, Prescriptions FROM PrescriptionTable WHERE AccessCode ='" + textBoxCodeVerify.Text + "';";
             try
             {
                 con.Open();
@@ -52,8 +52,7 @@ namespace OnlinePharmacy
                     textBoxInformation.AppendText(Environment.NewLine + (dr["HospitalName"].ToString()));
                     textBoxInformation.AppendText(Environment.NewLine + (dr["HospitalAddress"].ToString()));
                     textBoxInformation.AppendText(Environment.NewLine + (dr["HospitalPhoneNumber"].ToString()));
-
-                    textBoxPrescription.AppendText(Environment.NewLine + (dr[0].ToString()));
+                    
                 }
                 con.Close();
 
@@ -64,7 +63,7 @@ namespace OnlinePharmacy
 
                 while (dr1.Read())
                 {
-                    textBoxInformation.AppendText(Environment.NewLine + (dr1[0].ToString()));
+                    listBoxPrescriptions.Items.Add(dr1["Prescriptions"].ToString());
                 }
             }
             catch (Exception ex)

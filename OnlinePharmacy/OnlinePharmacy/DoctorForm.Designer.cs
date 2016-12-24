@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label patientIDLabel;
             System.Windows.Forms.Label prescriptionLabel;
             System.Windows.Forms.Label label1;
@@ -46,10 +47,15 @@
             this.radbtnBeforeMeals = new MaterialSkin.Controls.MaterialRadioButton();
             this.radbtnAfterMeals = new MaterialSkin.Controls.MaterialRadioButton();
             this.listBoxPrescriptions = new System.Windows.Forms.ListBox();
+            this.oNLINEPHARMACYDataSet = new OnlinePharmacy.ONLINEPHARMACYDataSet();
+            this.patientInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patientInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.PatientInfoTableAdapter();
             patientIDLabel = new System.Windows.Forms.Label();
             prescriptionLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             accessIDLabel1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.oNLINEPHARMACYDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientInfoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // patientIDLabel
@@ -100,11 +106,16 @@
             // 
             this.patientIDComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.patientIDComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.patientIDComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.patientIDComboBox.DataSource = this.patientInfoBindingSource;
+            this.patientIDComboBox.DisplayMember = "LastName";
             this.patientIDComboBox.FormattingEnabled = true;
             this.patientIDComboBox.Location = new System.Drawing.Point(189, 89);
             this.patientIDComboBox.Name = "patientIDComboBox";
             this.patientIDComboBox.Size = new System.Drawing.Size(319, 21);
             this.patientIDComboBox.TabIndex = 0;
+            this.patientIDComboBox.ValueMember = "LastName";
             this.patientIDComboBox.DropDown += new System.EventHandler(this.patientIDComboBox_DropDown);
             this.patientIDComboBox.DropDownClosed += new System.EventHandler(this.patientIDComboBox_DropDownClosed);
             this.patientIDComboBox.TextChanged += new System.EventHandler(this.patientIDComboBox_TextChanged);
@@ -288,6 +299,20 @@
             this.listBoxPrescriptions.Size = new System.Drawing.Size(618, 95);
             this.listBoxPrescriptions.TabIndex = 17;
             // 
+            // oNLINEPHARMACYDataSet
+            // 
+            this.oNLINEPHARMACYDataSet.DataSetName = "ONLINEPHARMACYDataSet";
+            this.oNLINEPHARMACYDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // patientInfoBindingSource
+            // 
+            this.patientInfoBindingSource.DataMember = "PatientInfo";
+            this.patientInfoBindingSource.DataSource = this.oNLINEPHARMACYDataSet;
+            // 
+            // patientInfoTableAdapter
+            // 
+            this.patientInfoTableAdapter.ClearBeforeFill = true;
+            // 
             // DoctorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,6 +344,8 @@
             this.Text = "Doctor Form";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.PatientForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.oNLINEPHARMACYDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientInfoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,5 +366,8 @@
         private MaterialSkin.Controls.MaterialRadioButton radbtnBeforeMeals;
         private MaterialSkin.Controls.MaterialRadioButton radbtnAfterMeals;
         private System.Windows.Forms.ListBox listBoxPrescriptions;
+        private ONLINEPHARMACYDataSet oNLINEPHARMACYDataSet;
+        private System.Windows.Forms.BindingSource patientInfoBindingSource;
+        private ONLINEPHARMACYDataSetTableAdapters.PatientInfoTableAdapter patientInfoTableAdapter;
     }
 }
