@@ -35,7 +35,7 @@
             this.textBoxInformation = new System.Windows.Forms.TextBox();
             this.buttonVerify = new MaterialSkin.Controls.MaterialRaisedButton();
             this.linkLabelPrint = new System.Windows.Forms.LinkLabel();
-            this.listBoxPrescriptions = new System.Windows.Forms.ListBox();
+            this.textBoxPrescriptions = new System.Windows.Forms.TextBox();
             patientIDLabel = new System.Windows.Forms.Label();
             prescriptionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -64,7 +64,7 @@
             this.textBoxCodeVerify.Location = new System.Drawing.Point(152, 33);
             this.textBoxCodeVerify.Name = "textBoxCodeVerify";
             this.textBoxCodeVerify.Size = new System.Drawing.Size(238, 29);
-            this.textBoxCodeVerify.TabIndex = 1;
+            this.textBoxCodeVerify.TabIndex = 0;
             // 
             // label2
             // 
@@ -77,12 +77,12 @@
             // 
             // textBoxInformation
             // 
-            this.textBoxInformation.BackColor = System.Drawing.SystemColors.Info;
+            this.textBoxInformation.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBoxInformation.Location = new System.Drawing.Point(143, 104);
             this.textBoxInformation.Multiline = true;
             this.textBoxInformation.Name = "textBoxInformation";
             this.textBoxInformation.ReadOnly = true;
-            this.textBoxInformation.Size = new System.Drawing.Size(306, 112);
+            this.textBoxInformation.Size = new System.Drawing.Size(438, 112);
             this.textBoxInformation.TabIndex = 1;
             // 
             // buttonVerify
@@ -93,7 +93,7 @@
             this.buttonVerify.Name = "buttonVerify";
             this.buttonVerify.Primary = true;
             this.buttonVerify.Size = new System.Drawing.Size(75, 23);
-            this.buttonVerify.TabIndex = 7;
+            this.buttonVerify.TabIndex = 1;
             this.buttonVerify.Text = "verify";
             this.buttonVerify.UseVisualStyleBackColor = true;
             this.buttonVerify.Click += new System.EventHandler(this.buttonVerify_Click_1);
@@ -104,17 +104,19 @@
             this.linkLabelPrint.Location = new System.Drawing.Point(220, 348);
             this.linkLabelPrint.Name = "linkLabelPrint";
             this.linkLabelPrint.Size = new System.Drawing.Size(82, 13);
-            this.linkLabelPrint.TabIndex = 8;
+            this.linkLabelPrint.TabIndex = 2;
             this.linkLabelPrint.TabStop = true;
             this.linkLabelPrint.Text = "Print information";
             // 
-            // listBoxPrescriptions
+            // textBoxPrescriptions
             // 
-            this.listBoxPrescriptions.FormattingEnabled = true;
-            this.listBoxPrescriptions.Location = new System.Drawing.Point(143, 222);
-            this.listBoxPrescriptions.Name = "listBoxPrescriptions";
-            this.listBoxPrescriptions.Size = new System.Drawing.Size(306, 121);
-            this.listBoxPrescriptions.TabIndex = 9;
+            this.textBoxPrescriptions.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.textBoxPrescriptions.Location = new System.Drawing.Point(143, 233);
+            this.textBoxPrescriptions.Multiline = true;
+            this.textBoxPrescriptions.Name = "textBoxPrescriptions";
+            this.textBoxPrescriptions.ReadOnly = true;
+            this.textBoxPrescriptions.Size = new System.Drawing.Size(438, 112);
+            this.textBoxPrescriptions.TabIndex = 1;
             // 
             // PharmacistForm
             // 
@@ -122,15 +124,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(606, 370);
-            this.Controls.Add(this.listBoxPrescriptions);
             this.Controls.Add(this.linkLabelPrint);
             this.Controls.Add(this.buttonVerify);
             this.Controls.Add(patientIDLabel);
             this.Controls.Add(prescriptionLabel);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxPrescriptions);
             this.Controls.Add(this.textBoxInformation);
             this.Controls.Add(this.textBoxCodeVerify);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "PharmacistForm";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PharmacistForm";
             this.Load += new System.EventHandler(this.PharmacistForm_Load);
             this.ResumeLayout(false);
@@ -145,6 +152,6 @@
         private System.Windows.Forms.TextBox textBoxInformation;
         private MaterialSkin.Controls.MaterialRaisedButton buttonVerify;
         private System.Windows.Forms.LinkLabel linkLabelPrint;
-        private System.Windows.Forms.ListBox listBoxPrescriptions;
+        private System.Windows.Forms.TextBox textBoxPrescriptions;
     }
 }

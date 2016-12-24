@@ -353,6 +353,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(841, 489);
+            this.ControlBox = false;
             this.Controls.Add(this.textBoxPrescriptions);
             this.Controls.Add(this.textBoxPatientName);
             this.Controls.Add(this.radbtnAfterMeals);
