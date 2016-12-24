@@ -1,6 +1,6 @@
 ﻿namespace OnlinePharmacy
 {
-    partial class PatientForm
+    partial class DoctorForm
     {
         /// <summary>
         /// Required designer variable.
@@ -203,7 +203,7 @@
             this.textBoxPatientInfo.Size = new System.Drawing.Size(212, 199);
             this.textBoxPatientInfo.TabIndex = 2;
             // 
-            // PatientForm
+            // DoctorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -223,10 +223,10 @@
             this.Controls.Add(this.patientIDComboBox);
             this.Controls.Add(prescriptionLabel);
             this.MaximizeBox = false;
-            this.Name = "PatientForm";
+            this.Name = "DoctorForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Patient Form";
+            this.Text = "Doctor Form";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.PatientForm_Load);
             this.ResumeLayout(false);

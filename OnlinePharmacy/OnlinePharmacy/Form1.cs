@@ -31,7 +31,7 @@ namespace OnlinePharmacy
                 {
                     MessageBox.Show("Login Successful");
                     Hide();
-                    PatientForm stdata = new PatientForm();
+                    DoctorForm stdata = new DoctorForm();
                     stdata.ShowDialog();
                     Show();
                 }

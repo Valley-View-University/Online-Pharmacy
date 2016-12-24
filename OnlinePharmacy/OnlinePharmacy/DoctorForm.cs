@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace OnlinePharmacy
 {
-    public partial class PatientForm : Form
+    public partial class DoctorForm : Form
     {
-        public PatientForm()
+        public DoctorForm()
         {
             InitializeComponent();
         }
