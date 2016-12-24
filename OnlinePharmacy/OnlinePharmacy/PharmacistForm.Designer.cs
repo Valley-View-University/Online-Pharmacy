@@ -33,7 +33,7 @@
             this.textBoxCodeVerify = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxPrescription = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxInformation = new System.Windows.Forms.TextBox();
             this.buttonVerify = new MaterialSkin.Controls.MaterialRaisedButton();
             patientIDLabel = new System.Windows.Forms.Label();
             prescriptionLabel = new System.Windows.Forms.Label();
@@ -83,15 +83,15 @@
             this.textBoxPrescription.Size = new System.Drawing.Size(247, 109);
             this.textBoxPrescription.TabIndex = 1;
             // 
-            // textBox1
+            // textBoxInformation
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Location = new System.Drawing.Point(143, 104);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(247, 112);
-            this.textBox1.TabIndex = 1;
+            this.textBoxInformation.BackColor = System.Drawing.SystemColors.Info;
+            this.textBoxInformation.Location = new System.Drawing.Point(143, 104);
+            this.textBoxInformation.Multiline = true;
+            this.textBoxInformation.Name = "textBoxInformation";
+            this.textBoxInformation.ReadOnly = true;
+            this.textBoxInformation.Size = new System.Drawing.Size(247, 112);
+            this.textBoxInformation.TabIndex = 1;
             // 
             // buttonVerify
             // 
@@ -117,7 +117,7 @@
             this.Controls.Add(prescriptionLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxPrescription);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxInformation);
             this.Controls.Add(this.textBoxCodeVerify);
             this.Name = "PharmacistForm";
             this.Text = "PharmacistForm";
@@ -132,7 +132,7 @@
         private System.Windows.Forms.TextBox textBoxCodeVerify;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxPrescription;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxInformation;
         private MaterialSkin.Controls.MaterialRaisedButton buttonVerify;
     }
 }

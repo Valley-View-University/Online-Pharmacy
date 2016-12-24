@@ -26,11 +26,11 @@ namespace OnlinePharmacy
             
         }
 
-        private void buttonVerify_Click(object sender, EventArgs e)
+        private void buttonVerify_Click_1(object sender, EventArgs e)
         {
             SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Prescription WHERE AccessID ='" + textBoxCodeVerify.Text + "'", con);
-            string Query = "SELECT Prescription FROM Prescription WHERE AccessID ='" + textBoxCodeVerify.Text + "';";
-            string Query1 = "SELECT PatientID FROM Prescription WHERE AccessID ='" + textBoxCodeVerify.Text + "';";
+            string Query = "SELECT AccessCode, HospitalName, HospitalAddress, HospitalPhoneNumber FROM Table, HospitalInfo WHERE Table.HospitalID = HospitalInfo.HospitalID AND WHERE AccessCode = '" + textBoxCodeVerify.Text + "';";
+            string Query1 = "SELECT Prescription FROM Prescription WHERE AccessID ='" + textBoxCodeVerify.Text + "';";
             try
             {
                 con.Open();
@@ -49,6 +49,10 @@ namespace OnlinePharmacy
 
                 while (dr.Read())
                 {
+                    textBoxInformation.AppendText(Environment.NewLine + (dr["HospitalName"].ToString()));
+                    textBoxInformation.AppendText(Environment.NewLine + (dr["HospitalAddress"].ToString()));
+                    textBoxInformation.AppendText(Environment.NewLine + (dr["HospitalPhoneNumber"].ToString()));
+
                     textBoxPrescription.AppendText(Environment.NewLine + (dr[0].ToString()));
                 }
                 con.Close();
@@ -60,7 +64,7 @@ namespace OnlinePharmacy
 
                 while (dr1.Read())
                 {
-                    textBox1.AppendText(Environment.NewLine + (dr1[0].ToString()));
+                    textBoxInformation.AppendText(Environment.NewLine + (dr1[0].ToString()));
                 }
             }
             catch (Exception ex)
@@ -68,11 +72,6 @@ namespace OnlinePharmacy
                 MessageBox.Show(ex.Message);
             }
             finally { con.Close(); }
-        }
-
-        private void prescriptionBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

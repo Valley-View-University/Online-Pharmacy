@@ -41,6 +41,11 @@
             this.accessIDTextBox = new System.Windows.Forms.TextBox();
             this.linkLabelGenerateCode = new System.Windows.Forms.LinkLabel();
             this.textBoxPatientInfo = new System.Windows.Forms.TextBox();
+            this.chkbxMorning = new MaterialSkin.Controls.MaterialCheckBox();
+            this.chkbxAfternoon = new MaterialSkin.Controls.MaterialCheckBox();
+            this.chkbxEvening = new MaterialSkin.Controls.MaterialCheckBox();
+            this.radbtnBeforeMeals = new MaterialSkin.Controls.MaterialRadioButton();
+            this.radbtnAfterMeals = new MaterialSkin.Controls.MaterialRadioButton();
             patientIDLabel = new System.Windows.Forms.Label();
             prescriptionLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -63,7 +68,7 @@
             prescriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             prescriptionLabel.AutoSize = true;
-            prescriptionLabel.Location = new System.Drawing.Point(112, 194);
+            prescriptionLabel.Location = new System.Drawing.Point(102, 298);
             prescriptionLabel.Name = "prescriptionLabel";
             prescriptionLabel.Size = new System.Drawing.Size(65, 13);
             prescriptionLabel.TabIndex = 5;
@@ -108,7 +113,7 @@
             // 
             this.buttonSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSubmit.Location = new System.Drawing.Point(239, 303);
+            this.buttonSubmit.Location = new System.Drawing.Point(303, 438);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(413, 39);
             this.buttonSubmit.TabIndex = 4;
@@ -120,10 +125,10 @@
             // 
             this.textBoxPrescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPrescription.Location = new System.Drawing.Point(187, 191);
+            this.textBoxPrescription.Location = new System.Drawing.Point(189, 284);
             this.textBoxPrescription.Multiline = true;
             this.textBoxPrescription.Name = "textBoxPrescription";
-            this.textBoxPrescription.Size = new System.Drawing.Size(319, 106);
+            this.textBoxPrescription.Size = new System.Drawing.Size(618, 148);
             this.textBoxPrescription.TabIndex = 2;
             // 
             // linkLabelDatabase
@@ -159,7 +164,7 @@
             // 
             this.linkLabelAddDrug.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabelAddDrug.AutoSize = true;
-            this.linkLabelAddDrug.Location = new System.Drawing.Point(513, 154);
+            this.linkLabelAddDrug.Location = new System.Drawing.Point(320, 265);
             this.linkLabelAddDrug.Name = "linkLabelAddDrug";
             this.linkLabelAddDrug.Size = new System.Drawing.Size(101, 13);
             this.linkLabelAddDrug.TabIndex = 3;
@@ -203,12 +208,99 @@
             this.textBoxPatientInfo.Size = new System.Drawing.Size(212, 199);
             this.textBoxPatientInfo.TabIndex = 2;
             // 
+            // chkbxMorning
+            // 
+            this.chkbxMorning.AutoSize = true;
+            this.chkbxMorning.Depth = 0;
+            this.chkbxMorning.Font = new System.Drawing.Font("Roboto", 10F);
+            this.chkbxMorning.Location = new System.Drawing.Point(189, 182);
+            this.chkbxMorning.Margin = new System.Windows.Forms.Padding(0);
+            this.chkbxMorning.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkbxMorning.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkbxMorning.Name = "chkbxMorning";
+            this.chkbxMorning.Ripple = true;
+            this.chkbxMorning.Size = new System.Drawing.Size(81, 30);
+            this.chkbxMorning.TabIndex = 15;
+            this.chkbxMorning.Text = "Morning";
+            this.chkbxMorning.UseVisualStyleBackColor = true;
+            // 
+            // chkbxAfternoon
+            // 
+            this.chkbxAfternoon.AutoSize = true;
+            this.chkbxAfternoon.Depth = 0;
+            this.chkbxAfternoon.Font = new System.Drawing.Font("Roboto", 10F);
+            this.chkbxAfternoon.Location = new System.Drawing.Point(314, 182);
+            this.chkbxAfternoon.Margin = new System.Windows.Forms.Padding(0);
+            this.chkbxAfternoon.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkbxAfternoon.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkbxAfternoon.Name = "chkbxAfternoon";
+            this.chkbxAfternoon.Ripple = true;
+            this.chkbxAfternoon.Size = new System.Drawing.Size(92, 30);
+            this.chkbxAfternoon.TabIndex = 15;
+            this.chkbxAfternoon.Text = "Afternoon";
+            this.chkbxAfternoon.UseVisualStyleBackColor = true;
+            // 
+            // chkbxEvening
+            // 
+            this.chkbxEvening.AutoSize = true;
+            this.chkbxEvening.Depth = 0;
+            this.chkbxEvening.Font = new System.Drawing.Font("Roboto", 10F);
+            this.chkbxEvening.Location = new System.Drawing.Point(430, 182);
+            this.chkbxEvening.Margin = new System.Windows.Forms.Padding(0);
+            this.chkbxEvening.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkbxEvening.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkbxEvening.Name = "chkbxEvening";
+            this.chkbxEvening.Ripple = true;
+            this.chkbxEvening.Size = new System.Drawing.Size(78, 30);
+            this.chkbxEvening.TabIndex = 15;
+            this.chkbxEvening.Text = "Evening";
+            this.chkbxEvening.UseVisualStyleBackColor = true;
+            // 
+            // radbtnBeforeMeals
+            // 
+            this.radbtnBeforeMeals.AutoSize = true;
+            this.radbtnBeforeMeals.Depth = 0;
+            this.radbtnBeforeMeals.Font = new System.Drawing.Font("Roboto", 10F);
+            this.radbtnBeforeMeals.Location = new System.Drawing.Point(189, 212);
+            this.radbtnBeforeMeals.Margin = new System.Windows.Forms.Padding(0);
+            this.radbtnBeforeMeals.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.radbtnBeforeMeals.MouseState = MaterialSkin.MouseState.HOVER;
+            this.radbtnBeforeMeals.Name = "radbtnBeforeMeals";
+            this.radbtnBeforeMeals.Ripple = true;
+            this.radbtnBeforeMeals.Size = new System.Drawing.Size(111, 30);
+            this.radbtnBeforeMeals.TabIndex = 16;
+            this.radbtnBeforeMeals.TabStop = true;
+            this.radbtnBeforeMeals.Text = "Before Meals";
+            this.radbtnBeforeMeals.UseVisualStyleBackColor = true;
+            // 
+            // radbtnAfterMeals
+            // 
+            this.radbtnAfterMeals.AutoSize = true;
+            this.radbtnAfterMeals.Depth = 0;
+            this.radbtnAfterMeals.Font = new System.Drawing.Font("Roboto", 10F);
+            this.radbtnAfterMeals.Location = new System.Drawing.Point(407, 212);
+            this.radbtnAfterMeals.Margin = new System.Windows.Forms.Padding(0);
+            this.radbtnAfterMeals.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.radbtnAfterMeals.MouseState = MaterialSkin.MouseState.HOVER;
+            this.radbtnAfterMeals.Name = "radbtnAfterMeals";
+            this.radbtnAfterMeals.Ripple = true;
+            this.radbtnAfterMeals.Size = new System.Drawing.Size(101, 30);
+            this.radbtnAfterMeals.TabIndex = 16;
+            this.radbtnAfterMeals.TabStop = true;
+            this.radbtnAfterMeals.Text = "After Meals";
+            this.radbtnAfterMeals.UseVisualStyleBackColor = true;
+            // 
             // DoctorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(841, 489);
+            this.Controls.Add(this.radbtnAfterMeals);
+            this.Controls.Add(this.radbtnBeforeMeals);
+            this.Controls.Add(this.chkbxEvening);
+            this.Controls.Add(this.chkbxAfternoon);
+            this.Controls.Add(this.chkbxMorning);
             this.Controls.Add(this.linkLabelGenerateCode);
             this.Controls.Add(accessIDLabel1);
             this.Controls.Add(this.accessIDTextBox);
@@ -244,5 +336,10 @@
         private System.Windows.Forms.TextBox accessIDTextBox;
         private System.Windows.Forms.LinkLabel linkLabelGenerateCode;
         private System.Windows.Forms.TextBox textBoxPatientInfo;
+        private MaterialSkin.Controls.MaterialCheckBox chkbxMorning;
+        private MaterialSkin.Controls.MaterialCheckBox chkbxAfternoon;
+        private MaterialSkin.Controls.MaterialCheckBox chkbxEvening;
+        private MaterialSkin.Controls.MaterialRadioButton radbtnBeforeMeals;
+        private MaterialSkin.Controls.MaterialRadioButton radbtnAfterMeals;
     }
 }

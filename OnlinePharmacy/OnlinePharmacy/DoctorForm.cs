@@ -89,6 +89,20 @@ namespace OnlinePharmacy
 
         private void linkLabelAddDrug_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            string meal, time, drug;
+            if(!radbtnBeforeMeals.Checked && !radbtnAfterMeals.Checked) { MessageBox.Show("Enter the meal time"); }
+            if (radbtnAfterMeals.Checked){ meal = radbtnAfterMeals.Tag.ToString(); }
+            if (radbtnBeforeMeals.Checked){ meal = radbtnBeforeMeals.Tag.ToString(); }
+            if (chkbxMorning.Checked)
+            {
+                if (chkbxAfternoon.Checked)
+                {
+                    if (chkbxEvening.Checked)
+                    {
+                        time = chkbxMorning.Tag.ToString() + ", " + chkbxAfternoon.Tag.ToString() + ", " + chkbxEvening.Tag.ToString();
+                    }
+                }
+            }
             if (string.IsNullOrWhiteSpace(comboBoxDrugs.Text))
             {
                 MessageBox.Show("Select Drug");
