@@ -34,7 +34,6 @@
             System.Windows.Forms.Label accessIDLabel1;
             this.patientIDComboBox = new System.Windows.Forms.ComboBox();
             this.buttonSubmit = new System.Windows.Forms.Button();
-            this.textBoxPrescription = new System.Windows.Forms.TextBox();
             this.linkLabelDatabase = new System.Windows.Forms.LinkLabel();
             this.comboBoxDrugs = new System.Windows.Forms.ComboBox();
             this.linkLabelAddDrug = new System.Windows.Forms.LinkLabel();
@@ -46,6 +45,7 @@
             this.chkbxEvening = new MaterialSkin.Controls.MaterialCheckBox();
             this.radbtnBeforeMeals = new MaterialSkin.Controls.MaterialRadioButton();
             this.radbtnAfterMeals = new MaterialSkin.Controls.MaterialRadioButton();
+            this.listBoxPrescriptions = new System.Windows.Forms.ListBox();
             patientIDLabel = new System.Windows.Forms.Label();
             prescriptionLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -120,16 +120,6 @@
             this.buttonSubmit.Text = "SUBMIT";
             this.buttonSubmit.UseVisualStyleBackColor = true;
             this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
-            // 
-            // textBoxPrescription
-            // 
-            this.textBoxPrescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPrescription.Location = new System.Drawing.Point(189, 284);
-            this.textBoxPrescription.Multiline = true;
-            this.textBoxPrescription.Name = "textBoxPrescription";
-            this.textBoxPrescription.Size = new System.Drawing.Size(618, 148);
-            this.textBoxPrescription.TabIndex = 2;
             // 
             // linkLabelDatabase
             // 
@@ -290,12 +280,21 @@
             this.radbtnAfterMeals.Text = "After Meals";
             this.radbtnAfterMeals.UseVisualStyleBackColor = true;
             // 
+            // listBoxPrescriptions
+            // 
+            this.listBoxPrescriptions.FormattingEnabled = true;
+            this.listBoxPrescriptions.Location = new System.Drawing.Point(180, 298);
+            this.listBoxPrescriptions.Name = "listBoxPrescriptions";
+            this.listBoxPrescriptions.Size = new System.Drawing.Size(618, 95);
+            this.listBoxPrescriptions.TabIndex = 17;
+            // 
             // DoctorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(841, 489);
+            this.Controls.Add(this.listBoxPrescriptions);
             this.Controls.Add(this.radbtnAfterMeals);
             this.Controls.Add(this.radbtnBeforeMeals);
             this.Controls.Add(this.chkbxEvening);
@@ -308,7 +307,6 @@
             this.Controls.Add(label1);
             this.Controls.Add(this.linkLabelDatabase);
             this.Controls.Add(this.textBoxPatientInfo);
-            this.Controls.Add(this.textBoxPrescription);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(patientIDLabel);
             this.Controls.Add(this.comboBoxDrugs);
@@ -329,7 +327,6 @@
         #endregion
         private System.Windows.Forms.ComboBox patientIDComboBox;
         private System.Windows.Forms.Button buttonSubmit;
-        private System.Windows.Forms.TextBox textBoxPrescription;
         private System.Windows.Forms.LinkLabel linkLabelDatabase;
         private System.Windows.Forms.ComboBox comboBoxDrugs;
         private System.Windows.Forms.LinkLabel linkLabelAddDrug;
@@ -341,5 +338,6 @@
         private MaterialSkin.Controls.MaterialCheckBox chkbxEvening;
         private MaterialSkin.Controls.MaterialRadioButton radbtnBeforeMeals;
         private MaterialSkin.Controls.MaterialRadioButton radbtnAfterMeals;
+        private System.Windows.Forms.ListBox listBoxPrescriptions;
     }
 }

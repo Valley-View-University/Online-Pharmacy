@@ -31,7 +31,6 @@ namespace OnlinePharmacy
             this.hospitalInfoTableAdapter.Fill(this.oNLINEPHARMACYDataSet.HospitalInfo);
             // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.Prescription' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.PharmacyInfo' table. You can move, or remove it, as needed.
-            this.pharmacyInfoTableAdapter.Fill(this.oNLINEPHARMACYDataSet.PharmacyInfo);
             // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.PatientInfo' table. You can move, or remove it, as needed.
             this.patientInfoTableAdapter.Fill(this.oNLINEPHARMACYDataSet.PatientInfo);
             // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.DoctorInfo' table. You can move, or remove it, as needed.

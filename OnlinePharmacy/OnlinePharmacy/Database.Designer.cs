@@ -62,7 +62,6 @@
             this.doctorInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.DoctorInfoTableAdapter();
             this.tableAdapterManager = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.TableAdapterManager();
             this.patientInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.PatientInfoTableAdapter();
-            this.pharmacyInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.PharmacyInfoTableAdapter();
             this.hospitalInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.HospitalInfoTableAdapter();
             this.patientInfoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -371,7 +370,6 @@
             this.tableAdapterManager.DoctorInfoTableAdapter = this.doctorInfoTableAdapter;
             this.tableAdapterManager.HospitalInfoTableAdapter = null;
             this.tableAdapterManager.PatientInfoTableAdapter = this.patientInfoTableAdapter;
-            this.tableAdapterManager.PharmacyInfoTableAdapter = this.pharmacyInfoTableAdapter;
             this.tableAdapterManager.UpdateOrder = OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // patientInfoTableAdapter
@@ -380,7 +378,6 @@
             // 
             // pharmacyInfoTableAdapter
             // 
-            this.pharmacyInfoTableAdapter.ClearBeforeFill = true;
             // 
             // hospitalInfoTableAdapter
             // 
@@ -548,7 +545,6 @@
         private System.Windows.Forms.ToolStripButton doctorInfoBindingNavigatorSaveItem;
         private ONLINEPHARMACYDataSetTableAdapters.PatientInfoTableAdapter patientInfoTableAdapter;
         private System.Windows.Forms.BindingSource patientInfoBindingSource;
-        private ONLINEPHARMACYDataSetTableAdapters.PharmacyInfoTableAdapter pharmacyInfoTableAdapter;
         private System.Windows.Forms.BindingSource pharmacyInfoBindingSource;
         private System.Windows.Forms.TabPage tabPageHospitalInfo;
         private System.Windows.Forms.BindingSource hospitalInfoBindingSource;

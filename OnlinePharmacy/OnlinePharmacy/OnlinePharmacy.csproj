@@ -67,11 +67,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ONLINEPHARMACYDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PatientForm.cs">
+    <Compile Include="DoctorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PatientForm.Designer.cs">
-      <DependentUpon>PatientForm.cs</DependentUpon>
+    <Compile Include="DoctorForm.Designer.cs">
+      <DependentUpon>DoctorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PharmacistForm.cs">
       <SubType>Form</SubType>
@@ -93,8 +93,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PatientForm.resx">
-      <DependentUpon>PatientForm.cs</DependentUpon>
+    <EmbeddedResource Include="DoctorForm.resx">
+      <DependentUpon>DoctorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PharmacistForm.resx">
       <DependentUpon>PharmacistForm.cs</DependentUpon>

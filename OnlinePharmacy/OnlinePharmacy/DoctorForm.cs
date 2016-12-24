@@ -17,7 +17,8 @@ namespace OnlinePharmacy
         {
             InitializeComponent();
         }
-        List<String> list = new List<string>();
+        List<string> list = new List<string>();
+        List<string> timeOfDay = new List<string>();
         SqlConnection con = new SqlConnection(@"Data Source=(localdb)\v11.0;Initial Catalog=ONLINEPHARMACY;Integrated Security=True");
 
         private static Random random = new Random();
@@ -26,14 +27,7 @@ namespace OnlinePharmacy
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
         }
-        
-
        
-
-        private void prescriptionBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-        }
 
         private void PatientForm_Load(object sender, EventArgs e)
         {
@@ -44,7 +38,7 @@ namespace OnlinePharmacy
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             SqlDataAdapter sda = new SqlDataAdapter();
-            string Query = "UPDATE Prescription SET Prescription = '" + textBoxPrescription.Text + "',AccessID = '"+ accessIDTextBox.Text +"' WHERE PatientID = '"+ patientIDComboBox.Text +"';";
+            string Query = "UPDATE Table SET Prescriptions = '" + listBoxPrescriptions.Items.ToString() + "',AccessID = '"+ accessIDTextBox.Text +"' WHERE PatientID = '"+ patientIDComboBox.Text +"';";
             try
             {
                 SqlCommand cmd = new SqlCommand(Query, con);
@@ -89,20 +83,24 @@ namespace OnlinePharmacy
 
         private void linkLabelAddDrug_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string meal, time, drug;
+            string meal = "", time = "", drug="";
             if(!radbtnBeforeMeals.Checked && !radbtnAfterMeals.Checked) { MessageBox.Show("Enter the meal time"); }
-            if (radbtnAfterMeals.Checked){ meal = radbtnAfterMeals.Tag.ToString(); }
-            if (radbtnBeforeMeals.Checked){ meal = radbtnBeforeMeals.Tag.ToString(); }
+            if (radbtnAfterMeals.Checked){ meal = radbtnAfterMeals.Text; }
+            if (radbtnBeforeMeals.Checked){ meal = radbtnBeforeMeals.Text; }
+
             if (chkbxMorning.Checked)
             {
-                if (chkbxAfternoon.Checked)
-                {
-                    if (chkbxEvening.Checked)
-                    {
-                        time = chkbxMorning.Tag.ToString() + ", " + chkbxAfternoon.Tag.ToString() + ", " + chkbxEvening.Tag.ToString();
-                    }
-                }
+                time = chkbxMorning.Text;
             }
+            if (chkbxAfternoon.Checked && chkbxAfternoon.Checked)
+            {
+                time = chkbxMorning.Text + ", " + chkbxAfternoon.Text;
+            }
+            if (chkbxEvening.Checked && chkbxAfternoon.Checked && chkbxEvening.Checked)
+            {
+                time = (chkbxMorning.Text + ", " + chkbxAfternoon.Text + ", " + chkbxEvening.Text);
+            }
+                  
             if (string.IsNullOrWhiteSpace(comboBoxDrugs.Text))
             {
                 MessageBox.Show("Select Drug");
@@ -113,9 +111,11 @@ namespace OnlinePharmacy
                 else
                 {
                     list.Add(comboBoxDrugs.Text);
-                    textBoxPrescription.AppendText(comboBoxDrugs.Text + Environment.NewLine);
+                    listBoxPrescriptions.Items.Add(comboBoxDrugs.Text + ",\t\t " + meal + ",\t\t " + time);
                 }
             }
+
+            
         }
 
         private void patientIDComboBox_DropDownClosed(object sender, EventArgs e)
