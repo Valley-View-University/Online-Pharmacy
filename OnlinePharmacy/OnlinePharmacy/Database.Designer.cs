@@ -426,6 +426,7 @@
             this.doctorInfoBindingNavigator.Size = new System.Drawing.Size(774, 25);
             this.doctorInfoBindingNavigator.TabIndex = 1;
             this.doctorInfoBindingNavigator.Text = "bindingNavigator1";
+            this.doctorInfoBindingNavigator.Visible = false;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -659,6 +660,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(774, 533);
             this.Controls.Add(this.doctorInfoBindingNavigator);
             this.Controls.Add(this.tabControl1);

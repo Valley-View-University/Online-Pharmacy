@@ -101,25 +101,31 @@ namespace OnlinePharmacy
         private void linkLabelAddDrug_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string meal = "", time = "";
-            if (!radbtnBeforeMeals.Checked && !radbtnAfterMeals.Checked) { MessageBox.Show("Enter the meal time"); }
-            if (radbtnAfterMeals.Checked) { meal = radbtnAfterMeals.Text; }
-            if (radbtnBeforeMeals.Checked) { meal = radbtnBeforeMeals.Text; }
-
-            if (chkbxMorning.Checked) { time = chkbxMorning.Text; }
-            if (chkbxAfternoon.Checked) { time = chkbxAfternoon.Text; }
-            if (chkbxEvening.Checked) { time = chkbxEvening.Text; }
-
-            if (chkbxMorning.Checked && chkbxAfternoon.Checked) { time = chkbxMorning.Text + ", " + chkbxAfternoon.Text; }
-            if (chkbxEvening.Checked && chkbxAfternoon.Checked && chkbxEvening.Checked) { time = (chkbxMorning.Text + ", " + chkbxAfternoon.Text + ", " + chkbxEvening.Text); }
-
-            if (string.IsNullOrWhiteSpace(comboBoxDrugs.Text)) { MessageBox.Show("Select Drug"); }
+            if (!radbtnBeforeMeals.Checked && !radbtnAfterMeals.Checked || (!chkbxMorning.Checked && !chkbxAfternoon.Checked && !chkbxEvening.Checked))
+            {
+                MessageBox.Show("Some fields are empty or unchecked");
+            }
             else
             {
-                if (list.Contains(comboBoxDrugs.Text)) { }
+                if (radbtnAfterMeals.Checked) { meal = radbtnAfterMeals.Text; }
+                if (radbtnBeforeMeals.Checked) { meal = radbtnBeforeMeals.Text; }
+
+                if (chkbxMorning.Checked) { time = chkbxMorning.Text; }
+                if (chkbxAfternoon.Checked) { time = chkbxAfternoon.Text; }
+                if (chkbxEvening.Checked) { time = chkbxEvening.Text; }
+
+                if (chkbxMorning.Checked && chkbxAfternoon.Checked) { time = chkbxMorning.Text + ", " + chkbxAfternoon.Text; }
+                if (chkbxEvening.Checked && chkbxAfternoon.Checked && chkbxEvening.Checked) { time = (chkbxMorning.Text + ", " + chkbxAfternoon.Text + ", " + chkbxEvening.Text); }
+
+                if (string.IsNullOrWhiteSpace(comboBoxDrugs.Text)) { MessageBox.Show("Select Drug"); }
                 else
                 {
-                    list.Add(comboBoxDrugs.Text);
-                    textBoxPrescriptions.AppendText(comboBoxDrugs.Text + ",\t\t " + meal + ",\t\t " + time + Environment.NewLine);
+                    if (list.Contains(comboBoxDrugs.Text)) { }
+                    else
+                    {
+                        list.Add(comboBoxDrugs.Text);
+                        textBoxPrescriptions.AppendText(comboBoxDrugs.Text + ",\t\t " + meal + ",\t\t " + time + Environment.NewLine);
+                    }
                 }
             }
 
