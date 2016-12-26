@@ -188,7 +188,11 @@ namespace OnlinePharmacy
 
         private void linkLabelLogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Close();
+            DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Close();
+            }
         }
     }
 }
