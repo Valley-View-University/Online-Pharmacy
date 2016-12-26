@@ -34,6 +34,7 @@
             this.textBoxPhUsername = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.textBoxPhPassword = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.buttonLogin = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.labelErrorMessage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // linkLabelDocLogin
@@ -87,6 +88,7 @@
             this.textBoxPhUsername.Size = new System.Drawing.Size(148, 23);
             this.textBoxPhUsername.TabIndex = 0;
             this.textBoxPhUsername.UseSystemPasswordChar = false;
+            this.textBoxPhUsername.Click += new System.EventHandler(this.textBoxPhUsername_Click);
             // 
             // textBoxPhPassword
             // 
@@ -102,6 +104,7 @@
             this.textBoxPhPassword.Size = new System.Drawing.Size(148, 23);
             this.textBoxPhPassword.TabIndex = 1;
             this.textBoxPhPassword.UseSystemPasswordChar = true;
+            this.textBoxPhPassword.Click += new System.EventHandler(this.textBoxPhPassword_Click);
             // 
             // buttonLogin
             // 
@@ -116,12 +119,21 @@
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click_1);
             // 
+            // labelErrorMessage
+            // 
+            this.labelErrorMessage.AutoSize = true;
+            this.labelErrorMessage.Location = new System.Drawing.Point(139, 244);
+            this.labelErrorMessage.Name = "labelErrorMessage";
+            this.labelErrorMessage.Size = new System.Drawing.Size(0, 13);
+            this.labelErrorMessage.TabIndex = 10;
+            // 
             // PharmacistLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(408, 393);
             this.ControlBox = false;
+            this.Controls.Add(this.labelErrorMessage);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPhPassword);
             this.Controls.Add(this.textBoxPhUsername);
@@ -146,5 +158,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField textBoxPhUsername;
         private MaterialSkin.Controls.MaterialSingleLineTextField textBoxPhPassword;
         private MaterialSkin.Controls.MaterialRaisedButton buttonLogin;
+        private System.Windows.Forms.Label labelErrorMessage;
     }
 }
