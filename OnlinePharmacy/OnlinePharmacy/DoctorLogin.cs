@@ -52,7 +52,8 @@ namespace OnlinePharmacy
                 }
                 else
                 {
-                    MessageBox.Show("ID or password invalid");
+                    labelErrorMessage.Text = "Username or password invalid";
+                    //MessageBox.Show("Username or password invalid");
                 }
 
             }
@@ -61,8 +62,17 @@ namespace OnlinePharmacy
                 MessageBox.Show(ex.Message);
             }
             finally {con.Close();}
+            textBoxDocUsername.Clear();textBoxDocPassword.Clear();
         }
 
-        
+        private void textBoxDocUsername_TextChanged(object sender, EventArgs e)
+        {
+            labelErrorMessage.Text = "";
+        }
+
+        private void textBoxDocPassword_TextChanged(object sender, EventArgs e)
+        {
+            labelErrorMessage.Text = "";
+        }
     }
 }

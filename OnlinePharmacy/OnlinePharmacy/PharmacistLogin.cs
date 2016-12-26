@@ -20,7 +20,15 @@ namespace OnlinePharmacy
         }
         SqlConnection con = new SqlConnection(@"Data Source=(localdb)\v11.0;Initial Catalog=ONLINEPHARMACY;Integrated Security=True");
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DoctorLogin dl = new DoctorLogin();
+            Hide();
+            dl.ShowDialog();
+            Show();
+        }
+
+        private void buttonLogin_Click_1(object sender, EventArgs e)
         {
             SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM PharmacyInfo WHERE Username ='" + textBoxPhUsername.Text + "'AND Password ='" + textBoxPhPassword.Text + "'", con);
 
@@ -46,14 +54,8 @@ namespace OnlinePharmacy
                 MessageBox.Show(ex.Message);
             }
             finally { con.Close(); }
-        }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            DoctorLogin dl = new DoctorLogin();
-            Hide();
-            dl.ShowDialog();
-            Show();
+            textBoxPhUsername.Clear();textBoxPhPassword.Clear();
         }
     }
 }

@@ -34,6 +34,7 @@
             this.textBoxDocPassword = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.labelErrorMessage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -60,6 +61,7 @@
             this.textBoxDocUsername.Name = "textBoxDocUsername";
             this.textBoxDocUsername.Size = new System.Drawing.Size(100, 20);
             this.textBoxDocUsername.TabIndex = 0;
+            this.textBoxDocUsername.TextChanged += new System.EventHandler(this.textBoxDocUsername_TextChanged);
             // 
             // textBoxDocPassword
             // 
@@ -68,6 +70,7 @@
             this.textBoxDocPassword.Size = new System.Drawing.Size(100, 20);
             this.textBoxDocPassword.TabIndex = 1;
             this.textBoxDocPassword.UseSystemPasswordChar = true;
+            this.textBoxDocPassword.TextChanged += new System.EventHandler(this.textBoxDocPassword_TextChanged);
             // 
             // buttonLogin
             // 
@@ -89,12 +92,21 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "More information and Options";
             // 
+            // labelErrorMessage
+            // 
+            this.labelErrorMessage.AutoSize = true;
+            this.labelErrorMessage.Location = new System.Drawing.Point(131, 180);
+            this.labelErrorMessage.Name = "labelErrorMessage";
+            this.labelErrorMessage.Size = new System.Drawing.Size(0, 13);
+            this.labelErrorMessage.TabIndex = 4;
+            // 
             // DoctorLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 394);
             this.ControlBox = false;
+            this.Controls.Add(this.labelErrorMessage);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxDocPassword);
@@ -122,6 +134,7 @@
         private System.Windows.Forms.TextBox textBoxDocPassword;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label labelErrorMessage;
     }
 }
 

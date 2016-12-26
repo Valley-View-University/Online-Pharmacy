@@ -43,7 +43,7 @@
             // patientIDLabel
             // 
             patientIDLabel.AutoSize = true;
-            patientIDLabel.Location = new System.Drawing.Point(49, 107);
+            patientIDLabel.Location = new System.Drawing.Point(314, 96);
             patientIDLabel.Name = "patientIDLabel";
             patientIDLabel.Size = new System.Drawing.Size(82, 13);
             patientIDLabel.TabIndex = 4;
@@ -52,16 +52,16 @@
             // prescriptionLabel
             // 
             prescriptionLabel.AutoSize = true;
-            prescriptionLabel.Location = new System.Drawing.Point(49, 222);
+            prescriptionLabel.Location = new System.Drawing.Point(314, 227);
             prescriptionLabel.Name = "prescriptionLabel";
-            prescriptionLabel.Size = new System.Drawing.Size(65, 13);
+            prescriptionLabel.Size = new System.Drawing.Size(87, 13);
             prescriptionLabel.TabIndex = 6;
-            prescriptionLabel.Text = "Prescription:";
+            prescriptionLabel.Text = "PRESCRIPTION";
             // 
             // textBoxCodeVerify
             // 
             this.textBoxCodeVerify.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCodeVerify.Location = new System.Drawing.Point(152, 33);
+            this.textBoxCodeVerify.Location = new System.Drawing.Point(235, 34);
             this.textBoxCodeVerify.Name = "textBoxCodeVerify";
             this.textBoxCodeVerify.Size = new System.Drawing.Size(238, 29);
             this.textBoxCodeVerify.TabIndex = 0;
@@ -69,16 +69,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(106, 42);
+            this.label2.Location = new System.Drawing.Point(266, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.Size = new System.Drawing.Size(183, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "CODE:";
+            this.label2.Text = "ENTER THE ACCESS CODE HERE:";
             // 
             // textBoxInformation
             // 
             this.textBoxInformation.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBoxInformation.Location = new System.Drawing.Point(143, 104);
+            this.textBoxInformation.Location = new System.Drawing.Point(143, 112);
             this.textBoxInformation.Multiline = true;
             this.textBoxInformation.Name = "textBoxInformation";
             this.textBoxInformation.ReadOnly = true;
@@ -88,7 +88,7 @@
             // buttonVerify
             // 
             this.buttonVerify.Depth = 0;
-            this.buttonVerify.Location = new System.Drawing.Point(237, 75);
+            this.buttonVerify.Location = new System.Drawing.Point(320, 69);
             this.buttonVerify.MouseState = MaterialSkin.MouseState.HOVER;
             this.buttonVerify.Name = "buttonVerify";
             this.buttonVerify.Primary = true;
@@ -101,7 +101,7 @@
             // linkLabelPrint
             // 
             this.linkLabelPrint.AutoSize = true;
-            this.linkLabelPrint.Location = new System.Drawing.Point(220, 348);
+            this.linkLabelPrint.Location = new System.Drawing.Point(314, 358);
             this.linkLabelPrint.Name = "linkLabelPrint";
             this.linkLabelPrint.Size = new System.Drawing.Size(82, 13);
             this.linkLabelPrint.TabIndex = 2;
@@ -111,7 +111,7 @@
             // textBoxPrescriptions
             // 
             this.textBoxPrescriptions.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBoxPrescriptions.Location = new System.Drawing.Point(143, 233);
+            this.textBoxPrescriptions.Location = new System.Drawing.Point(143, 243);
             this.textBoxPrescriptions.Multiline = true;
             this.textBoxPrescriptions.Name = "textBoxPrescriptions";
             this.textBoxPrescriptions.ReadOnly = true;

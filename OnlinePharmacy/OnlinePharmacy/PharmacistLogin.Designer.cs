@@ -42,7 +42,7 @@
             this.linkLabelDocLogin.Location = new System.Drawing.Point(316, 359);
             this.linkLabelDocLogin.Name = "linkLabelDocLogin";
             this.linkLabelDocLogin.Size = new System.Drawing.Size(68, 13);
-            this.linkLabelDocLogin.TabIndex = 8;
+            this.linkLabelDocLogin.TabIndex = 3;
             this.linkLabelDocLogin.TabStop = true;
             this.linkLabelDocLogin.Text = "Doctor Login";
             this.linkLabelDocLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
@@ -85,7 +85,7 @@
             this.textBoxPhUsername.SelectionLength = 0;
             this.textBoxPhUsername.SelectionStart = 0;
             this.textBoxPhUsername.Size = new System.Drawing.Size(148, 23);
-            this.textBoxPhUsername.TabIndex = 10;
+            this.textBoxPhUsername.TabIndex = 0;
             this.textBoxPhUsername.UseSystemPasswordChar = false;
             // 
             // textBoxPhPassword
@@ -100,8 +100,8 @@
             this.textBoxPhPassword.SelectionLength = 0;
             this.textBoxPhPassword.SelectionStart = 0;
             this.textBoxPhPassword.Size = new System.Drawing.Size(148, 23);
-            this.textBoxPhPassword.TabIndex = 10;
-            this.textBoxPhPassword.UseSystemPasswordChar = false;
+            this.textBoxPhPassword.TabIndex = 1;
+            this.textBoxPhPassword.UseSystemPasswordChar = true;
             // 
             // buttonLogin
             // 
@@ -111,9 +111,10 @@
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Primary = true;
             this.buttonLogin.Size = new System.Drawing.Size(75, 23);
-            this.buttonLogin.TabIndex = 11;
+            this.buttonLogin.TabIndex = 2;
             this.buttonLogin.Text = "log in";
             this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click_1);
             // 
             // PharmacistLogin
             // 
@@ -131,7 +132,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "PharmacistLogin";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PharmacistLogin";
             this.ResumeLayout(false);
