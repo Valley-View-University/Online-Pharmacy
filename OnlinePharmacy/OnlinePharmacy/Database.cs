@@ -39,5 +39,15 @@ namespace OnlinePharmacy
             this.doctorInfoTableAdapter.Fill(this.oNLINEPHARMACYDataSet.DoctorInfo);
 
         }
+
+        private void patientInfoDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void doctorInfoDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

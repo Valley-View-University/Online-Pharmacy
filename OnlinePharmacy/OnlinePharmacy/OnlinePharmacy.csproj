@@ -56,11 +56,17 @@
     <Compile Include="Database.Designer.cs">
       <DependentUpon>Database.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="DoctorLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="DoctorLogin.Designer.cs">
+      <DependentUpon>DoctorLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoreOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoreOptions.Designer.cs">
+      <DependentUpon>MoreOptions.cs</DependentUpon>
     </Compile>
     <Compile Include="ONLINEPHARMACYDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -90,11 +96,14 @@
     <EmbeddedResource Include="Database.resx">
       <DependentUpon>Database.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="DoctorLogin.resx">
+      <DependentUpon>DoctorLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorForm.resx">
       <DependentUpon>DoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoreOptions.resx">
+      <DependentUpon>MoreOptions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PharmacistForm.resx">
       <DependentUpon>PharmacistForm.cs</DependentUpon>
