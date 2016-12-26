@@ -200,5 +200,21 @@ namespace OnlinePharmacy
                 Close();
             }
         }
+
+        private void linkLabelClearPrescriptions_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxPrescriptions.Text))
+            {
+                MessageBox.Show("No prescriptions given");
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to clear Prescription?", "Confirmation", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    textBoxPrescriptions.Clear();
+                }
+            }
+        }
     }
 }

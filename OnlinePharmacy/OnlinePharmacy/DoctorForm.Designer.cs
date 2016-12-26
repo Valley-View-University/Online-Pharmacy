@@ -56,6 +56,7 @@
             this.textBoxPrescriptions = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.linkLabelLogOut = new System.Windows.Forms.LinkLabel();
+            this.linkLabelClearPrescriptions = new System.Windows.Forms.LinkLabel();
             patientIDLabel = new System.Windows.Forms.Label();
             prescriptionLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -201,7 +202,7 @@
             // 
             this.linkLabelAddDrug.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabelAddDrug.AutoSize = true;
-            this.linkLabelAddDrug.Location = new System.Drawing.Point(320, 265);
+            this.linkLabelAddDrug.Location = new System.Drawing.Point(222, 265);
             this.linkLabelAddDrug.Name = "linkLabelAddDrug";
             this.linkLabelAddDrug.Size = new System.Drawing.Size(101, 13);
             this.linkLabelAddDrug.TabIndex = 3;
@@ -372,6 +373,17 @@
             this.linkLabelLogOut.Text = "LOG OUT";
             this.linkLabelLogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLogOut_LinkClicked);
             // 
+            // linkLabelClearPrescriptions
+            // 
+            this.linkLabelClearPrescriptions.AutoSize = true;
+            this.linkLabelClearPrescriptions.Location = new System.Drawing.Point(413, 265);
+            this.linkLabelClearPrescriptions.Name = "linkLabelClearPrescriptions";
+            this.linkLabelClearPrescriptions.Size = new System.Drawing.Size(108, 13);
+            this.linkLabelClearPrescriptions.TabIndex = 22;
+            this.linkLabelClearPrescriptions.TabStop = true;
+            this.linkLabelClearPrescriptions.Text = "Clear Prescription List";
+            this.linkLabelClearPrescriptions.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelClearPrescriptions_LinkClicked);
+            // 
             // DoctorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,6 +391,7 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(841, 489);
             this.ControlBox = false;
+            this.Controls.Add(this.linkLabelClearPrescriptions);
             this.Controls.Add(this.linkLabelLogOut);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBoxPrescriptions);
@@ -439,5 +452,6 @@
         private System.Windows.Forms.TextBox textBoxPrescriptions;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.LinkLabel linkLabelLogOut;
+        private System.Windows.Forms.LinkLabel linkLabelClearPrescriptions;
     }
 }
