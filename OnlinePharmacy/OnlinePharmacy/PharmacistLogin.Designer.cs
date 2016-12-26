@@ -39,7 +39,7 @@
             // linkLabelDocLogin
             // 
             this.linkLabelDocLogin.AutoSize = true;
-            this.linkLabelDocLogin.Location = new System.Drawing.Point(224, 44);
+            this.linkLabelDocLogin.Location = new System.Drawing.Point(316, 359);
             this.linkLabelDocLogin.Name = "linkLabelDocLogin";
             this.linkLabelDocLogin.Size = new System.Drawing.Size(68, 13);
             this.linkLabelDocLogin.TabIndex = 8;
@@ -53,7 +53,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(8, 114);
+            this.materialLabel1.Location = new System.Drawing.Point(32, 123);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(77, 19);
@@ -66,7 +66,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(12, 150);
+            this.materialLabel2.Location = new System.Drawing.Point(36, 159);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(75, 19);
@@ -77,7 +77,7 @@
             // 
             this.textBoxPhUsername.Depth = 0;
             this.textBoxPhUsername.Hint = "";
-            this.textBoxPhUsername.Location = new System.Drawing.Point(115, 114);
+            this.textBoxPhUsername.Location = new System.Drawing.Point(139, 123);
             this.textBoxPhUsername.MouseState = MaterialSkin.MouseState.HOVER;
             this.textBoxPhUsername.Name = "textBoxPhUsername";
             this.textBoxPhUsername.PasswordChar = '\0';
@@ -92,7 +92,7 @@
             // 
             this.textBoxPhPassword.Depth = 0;
             this.textBoxPhPassword.Hint = "";
-            this.textBoxPhPassword.Location = new System.Drawing.Point(115, 150);
+            this.textBoxPhPassword.Location = new System.Drawing.Point(139, 159);
             this.textBoxPhPassword.MouseState = MaterialSkin.MouseState.HOVER;
             this.textBoxPhPassword.Name = "textBoxPhPassword";
             this.textBoxPhPassword.PasswordChar = '\0';
@@ -106,7 +106,7 @@
             // buttonLogin
             // 
             this.buttonLogin.Depth = 0;
-            this.buttonLogin.Location = new System.Drawing.Point(152, 194);
+            this.buttonLogin.Location = new System.Drawing.Point(176, 203);
             this.buttonLogin.MouseState = MaterialSkin.MouseState.HOVER;
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Primary = true;
@@ -119,14 +119,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(304, 334);
+            this.ClientSize = new System.Drawing.Size(408, 393);
+            this.ControlBox = false;
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPhPassword);
             this.Controls.Add(this.textBoxPhUsername);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.linkLabelDocLogin);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "PharmacistLogin";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PharmacistLogin";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -329,8 +329,10 @@
             // 
             // textBoxPatientName
             // 
+            this.textBoxPatientName.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBoxPatientName.Location = new System.Drawing.Point(189, 93);
             this.textBoxPatientName.Name = "textBoxPatientName";
+            this.textBoxPatientName.ReadOnly = true;
             this.textBoxPatientName.Size = new System.Drawing.Size(319, 20);
             this.textBoxPatientName.TabIndex = 18;
             // 
@@ -354,6 +356,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(176, 13);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 20;
             // 
