@@ -23,17 +23,23 @@ namespace OnlinePharmacy
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
             SqlDataAdapter sda = new SqlDataAdapter("SELECT Username, Password FROM ClerkInfo WHERE Username = '" + textBoxUsername.Text + "'AND Password = '" + textBoxPassword.Text +"'",con);
+            string Query = "INSERT INTO LogBooks(Username, LastSignIn) values('" + textBoxUsername.Text + "','" + DateTime.Now + "');";
             try
             {
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 if (dt.Rows.Count == 1)
                 {
-                    MessageBox.Show("Login Successful");
-                    Hide();
-                    PharmacistForm stdata = new PharmacistForm();
-                    stdata.ShowDialog();
-                    Show();
+                    SqlCommand cmd = new SqlCommand(Query, con);
+                    SqlDataReader myReader;
+                    con.Close();
+                    con.Open();
+                    
+                    myReader = cmd.ExecuteReader();
+                    while (myReader.Read()) { }
+                    
+                    MessageBox.Show("Login Successful.");
+                    panelLogin.Hide();
                 }
                 else
                 {
@@ -46,6 +52,64 @@ namespace OnlinePharmacy
                 MessageBox.Show(ex.Message);
             }
             finally { con.Close(); }
+        }
+
+        private void textBoxUsername_Click(object sender, EventArgs e)
+        {
+            labelErrorMessage.Text = "";
+        }
+
+        private void textBoxPassword_Click(object sender, EventArgs e)
+        {
+            labelErrorMessage.Text = "";
+        }
+
+
+        private void patientInfoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.patientInfoBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.oNLINEPHARMACYDataSet);
+
+        }
+
+        private void patientInfoBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.patientInfoBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.oNLINEPHARMACYDataSet);
+
+        }
+
+        private void ClerkForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.PatientInfo' table. You can move, or remove it, as needed.
+            this.patientInfoTableAdapter.Fill(this.oNLINEPHARMACYDataSet.PatientInfo);
+
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            String Query = "INSERT INTO PatientInfo (PatientID, FirstName, MiddleName, LastName, PhoneNumber, DoctorID)" + "VALUES ('" + patientIDTextBox.Text + "','" + firstNameTextBox.Text + "','" + middleNameTextBox.Text + "','" + lastNameTextBox.Text + "','" + phoneNumberTextBox.Text + "','" + doctorIDComboBox.Text + "');";
+            SqlCommand cmd = new SqlCommand(Query, con);
+            SqlDataReader myReader;
+            if (string.IsNullOrWhiteSpace(patientIDTextBox.Text) || string.IsNullOrWhiteSpace(firstNameTextBox.Text) || string.IsNullOrWhiteSpace(lastNameTextBox.Text) || string.IsNullOrWhiteSpace(phoneNumberTextBox.Text) || string.IsNullOrWhiteSpace(doctorIDComboBox.Text))
+            {
+                MessageBox.Show("Some fields are empty");
+            }
+            else
+            {
+                try
+                {
+                    con.Open();
+                    myReader = cmd.ExecuteReader();
+                    MessageBox.Show("Information Saved");
+                    while (myReader.Read()) { }
+                    con.Close();
+                }
+                catch (Exception ex) { MessageBox.Show(ex.Message); }
+                finally { con.Close(); }
+            }
         }
     }
 }
