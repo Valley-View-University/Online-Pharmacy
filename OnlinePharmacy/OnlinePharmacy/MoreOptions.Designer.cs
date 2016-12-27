@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MoreOptions));
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
@@ -35,7 +36,10 @@
             this.tabPageLicAgre = new System.Windows.Forms.TabPage();
             this.tabPageAbUs = new System.Windows.Forms.TabPage();
             this.tabPageMoreOpt = new System.Windows.Forms.TabPage();
+            this.linkLabelClose = new System.Windows.Forms.LinkLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.materialTabControl1.SuspendLayout();
+            this.tabPageLicAgre.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage3
@@ -84,6 +88,7 @@
             // tabPageLicAgre
             // 
             this.tabPageLicAgre.BackColor = System.Drawing.Color.Transparent;
+            this.tabPageLicAgre.Controls.Add(this.textBox1);
             this.tabPageLicAgre.Location = new System.Drawing.Point(4, 22);
             this.tabPageLicAgre.Name = "tabPageLicAgre";
             this.tabPageLicAgre.Padding = new System.Windows.Forms.Padding(3);
@@ -109,19 +114,50 @@
             this.tabPageMoreOpt.TabIndex = 3;
             this.tabPageMoreOpt.Text = "More Options";
             // 
+            // linkLabelClose
+            // 
+            this.linkLabelClose.AutoSize = true;
+            this.linkLabelClose.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.linkLabelClose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.linkLabelClose.Location = new System.Drawing.Point(793, 9);
+            this.linkLabelClose.Name = "linkLabelClose";
+            this.linkLabelClose.Size = new System.Drawing.Size(33, 13);
+            this.linkLabelClose.TabIndex = 12;
+            this.linkLabelClose.TabStop = true;
+            this.linkLabelClose.Text = "Close";
+            this.linkLabelClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelClose_LinkClicked);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(3, 3);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(803, 224);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = resources.GetString("textBox1.Text");
+            // 
             // MoreOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(842, 388);
             this.ControlBox = false;
+            this.Controls.Add(this.linkLabelClose);
             this.Controls.Add(this.materialTabControl1);
             this.Controls.Add(this.materialTabSelector1);
             this.Name = "MoreOptions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MoreOptions";
             this.materialTabControl1.ResumeLayout(false);
+            this.tabPageLicAgre.ResumeLayout(false);
+            this.tabPageLicAgre.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -133,5 +169,7 @@
         private System.Windows.Forms.TabPage tabPageLicAgre;
         private System.Windows.Forms.TabPage tabPageAbUs;
         private System.Windows.Forms.TabPage tabPageMoreOpt;
+        private System.Windows.Forms.LinkLabel linkLabelClose;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

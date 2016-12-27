@@ -117,4 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="textBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>ONLINE PHARMACY SYSTEM
+SINGLE USE LICENSE AGREEMENT
+PLEASE READ THE FOLLOWING CDI LICENSE AGREEMENT ("AGREEMENT") CAREFULLY BEFORE CONTINUING. WITH YOUR ACCEPTANCE, THIS IS A LEGAL CONTRACT BETWEEN UNNAMED ONLINE PHARMACY SYSTEM, INC. ("OPS") AND YOU ("YOU").
+
+BY DOWNLOADING, ACCESSING OR USING THE CONTENT, YOU ACCEPT ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT AND AGREE TO BE BOUND BY THIS AGREEMENT. IF YOU DO NOT ACCEPT THE TERMS OF THIS AGREEMENT, YOU ARE NOT
+PERMITTED TO USE THE CONTENT. IN SUCH CASE, UNINSTALL.
+
+
+The license granted in this AGREEMENT is only for the personal use of individual healthcare providers or consumers. License agreements for all other professionals and organizations must be arranged through CDI. Please contact CDI at (866) 397-3433 or e-mail CDI at support@lexi.com
+
+1. Content. The CDI informational content, data, materials and software, as well as any third party software, documentation and any information accompanying this AGREEMENT, provided to you, whether by download, via the Internet, as part of a device or piece of equipment, or on any other media or in any other form (collectively the "Content") are licensed, not sold, to you by CDI for use only under the terms of this AGREEMENT, and CDI reserves all rights not expressly granted to you. You may own the media on which the Content is used but CDI and/or CDI's licensor(s) retain ownership of the Content itself. The terms of this AGREEMENT will govern any upgrade(s) provided by CDI that replace and/or supplement the original Content, unless such upgrade is accompanied by a separate license in which case the terms of that license will govern.
+
+2. License. Subject to the terms and conditions of this AGREEMENT, you are granted a limited non-exclusive, non-transferable, revocable license to install and use one copy of the Content. If the Content is provided via the Internet, then the license herein includes a license to access servers controlled by CDI ("Servers") only for the purpose of accessing the Content. This AGREEMENT does not allow the Content to exist locally on more than one computer at a time, and you may not make the Content available over a network where it could be used by multiple computers at the same time. 
+
+3. License Restrictions. You may NOT do any of the following yourself, or through any third party, and you may not permit or enable any third party to do any of the following (except as and only to the extent any of the following restrictions are prohibited by applicable law): (A) copy the Content; (B) modify or create derivative works based on the Content; (C) decompile, disassemble, or reverse engineer the Content in whole or in part; (D) defeat, disable, or circumvent any protection mechanism related to the Content; (E) sell, license, sublicense, lease, rent, distribute, disclose, permit access to, or transfer to any third party, whether for profit or without charge, any portion of the Content, or, in particular, without limiting the generality of the foregoing, distribute the Content on any media, make the Content accessible to the public or third parties, whether over networks, electronic bulletin boards, websites, or otherwise, or allow any third party to use the Content; (F) publish or otherwise communicate any review of, or information about, the performance of the Content to any third party without the prior written consent of CDI; (G) export, re-export, download, or otherwise use the Content in violation of any laws or regulations, including U.S. Department of Commerce Export Administration regulations and other applicable laws; or (H) use the Content in connection with life support systems, human implantation, medical devices, or any application where failure or malfunction could lead to possible loss of life or catastrophic property damage. Any attempt to do any of the foregoing is a violation of the rights of CDI and any of its licensors of</value>
+  </data>
 </root>

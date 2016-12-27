@@ -33,8 +33,9 @@
             this.textBoxDocUsername = new System.Windows.Forms.TextBox();
             this.textBoxDocPassword = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelMoreInfoOptions = new System.Windows.Forms.LinkLabel();
             this.labelErrorMessage = new System.Windows.Forms.Label();
+            this.linkLabelClose = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -82,15 +83,16 @@
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
-            // linkLabel1
+            // linkLabelMoreInfoOptions
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 372);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(145, 13);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "More information and Options";
+            this.linkLabelMoreInfoOptions.AutoSize = true;
+            this.linkLabelMoreInfoOptions.Location = new System.Drawing.Point(12, 372);
+            this.linkLabelMoreInfoOptions.Name = "linkLabelMoreInfoOptions";
+            this.linkLabelMoreInfoOptions.Size = new System.Drawing.Size(145, 13);
+            this.linkLabelMoreInfoOptions.TabIndex = 3;
+            this.linkLabelMoreInfoOptions.TabStop = true;
+            this.linkLabelMoreInfoOptions.Text = "More information and Options";
+            this.linkLabelMoreInfoOptions.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMoreInfoOptions_LinkClicked);
             // 
             // labelErrorMessage
             // 
@@ -100,20 +102,33 @@
             this.labelErrorMessage.Size = new System.Drawing.Size(0, 13);
             this.labelErrorMessage.TabIndex = 4;
             // 
+            // linkLabelClose
+            // 
+            this.linkLabelClose.AutoSize = true;
+            this.linkLabelClose.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.linkLabelClose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.linkLabelClose.Location = new System.Drawing.Point(308, 9);
+            this.linkLabelClose.Name = "linkLabelClose";
+            this.linkLabelClose.Size = new System.Drawing.Size(33, 13);
+            this.linkLabelClose.TabIndex = 12;
+            this.linkLabelClose.TabStop = true;
+            this.linkLabelClose.Text = "Close";
+            this.linkLabelClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelClose_LinkClicked);
+            // 
             // DoctorLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 394);
             this.ControlBox = false;
+            this.Controls.Add(this.linkLabelClose);
             this.Controls.Add(this.labelErrorMessage);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.linkLabelMoreInfoOptions);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxDocPassword);
             this.Controls.Add(this.textBoxDocUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DoctorLogin";
@@ -133,8 +148,9 @@
         private System.Windows.Forms.TextBox textBoxDocUsername;
         private System.Windows.Forms.TextBox textBoxDocPassword;
         private System.Windows.Forms.Button buttonLogin;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabelMoreInfoOptions;
         private System.Windows.Forms.Label labelErrorMessage;
+        private System.Windows.Forms.LinkLabel linkLabelClose;
     }
 }
 

@@ -35,6 +35,7 @@
             this.textBoxPhPassword = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.buttonLogin = new MaterialSkin.Controls.MaterialRaisedButton();
             this.labelErrorMessage = new System.Windows.Forms.Label();
+            this.linkLabelClose = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // linkLabelDocLogin
@@ -127,12 +128,26 @@
             this.labelErrorMessage.Size = new System.Drawing.Size(0, 13);
             this.labelErrorMessage.TabIndex = 10;
             // 
+            // linkLabelClose
+            // 
+            this.linkLabelClose.AutoSize = true;
+            this.linkLabelClose.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.linkLabelClose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.linkLabelClose.Location = new System.Drawing.Point(363, 9);
+            this.linkLabelClose.Name = "linkLabelClose";
+            this.linkLabelClose.Size = new System.Drawing.Size(33, 13);
+            this.linkLabelClose.TabIndex = 11;
+            this.linkLabelClose.TabStop = true;
+            this.linkLabelClose.Text = "Close";
+            this.linkLabelClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelClose_LinkClicked);
+            // 
             // PharmacistLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(408, 393);
             this.ControlBox = false;
+            this.Controls.Add(this.linkLabelClose);
             this.Controls.Add(this.labelErrorMessage);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPhPassword);
@@ -141,11 +156,13 @@
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.linkLabelDocLogin);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PharmacistLogin";
             this.ShowIcon = false;
+            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PharmacistLogin";
+            this.Text = "Pharmacist Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,5 +176,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField textBoxPhPassword;
         private MaterialSkin.Controls.MaterialRaisedButton buttonLogin;
         private System.Windows.Forms.Label labelErrorMessage;
+        private System.Windows.Forms.LinkLabel linkLabelClose;
     }
 }
