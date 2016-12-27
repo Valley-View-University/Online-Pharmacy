@@ -26,3 +26,4 @@ C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmac
 C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\bin\Debug\MaterialSkin.dll
 C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.DoctorForm.resources
 C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.MoreOptions.resources
+C:\Users\DR. BATSE\Documents\GitHub\Online-Pharmacy\OnlinePharmacy\OnlinePharmacy\obj\Debug\OnlinePharmacy.ClerkForm.resources
