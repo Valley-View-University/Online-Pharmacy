@@ -29,7 +29,7 @@ namespace OnlinePharmacy
         private void buttonVerify_Click_1(object sender, EventArgs e)
         {
             SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM PrescriptionTable WHERE CONVERT(VARCHAR, AccessCode) ='" + textBoxCodeVerify.Text + "'", con);
-            string Query = "SELECT HospitalName, HospitalAddress, HospitalPhoneNumber, AccessCode FROM HospitalInfo, PrescriptionTable WHERE PrescriptionTable.HospitalID = HospitalInfo.Hospital_Id AND CONVERT(VARCHAR, AccessCode)= '" + textBoxCodeVerify.Text + "';";
+            string Query = "SELECT HospitalName, HospitalAddress, HospitalPhoneNumber, AccessCode, PatientName FROM HospitalInfo, PrescriptionTable WHERE PrescriptionTable.HospitalID = HospitalInfo.Hospital_Id AND CONVERT(VARCHAR, AccessCode)= '" + textBoxCodeVerify.Text + "';";
             string Query1 = "SELECT Prescriptions FROM PrescriptionTable WHERE CONVERT(VARCHAR, AccessCode)='" + textBoxCodeVerify.Text + "';";
             try
             {
@@ -49,6 +49,7 @@ namespace OnlinePharmacy
 
                 while (dr.Read())
                 {
+                    textBoxInformation.AppendText(Environment.NewLine + "Patient  ID:\t\t " + dr["PatientName"].ToString());
                     textBoxInformation.AppendText(Environment.NewLine + "Hospital Name:\t\t " + (dr["HospitalName"].ToString()));
                     textBoxInformation.AppendText(Environment.NewLine + "Hospital Address:\t\t " + (dr["HospitalAddress"].ToString()));
                     textBoxInformation.AppendText(Environment.NewLine + "Hospital Phone:\t\t " + (dr["HospitalPhoneNumber"].ToString()));
