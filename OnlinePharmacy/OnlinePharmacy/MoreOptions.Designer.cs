@@ -118,6 +118,7 @@
             this.Controls.Add(this.materialTabControl1);
             this.Controls.Add(this.materialTabSelector1);
             this.Name = "MoreOptions";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MoreOptions";
             this.materialTabControl1.ResumeLayout(false);
             this.ResumeLayout(false);

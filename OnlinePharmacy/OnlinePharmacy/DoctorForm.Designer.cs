@@ -57,6 +57,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.linkLabelLogOut = new System.Windows.Forms.LinkLabel();
             this.linkLabelClearPrescriptions = new System.Windows.Forms.LinkLabel();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             patientIDLabel = new System.Windows.Forms.Label();
             prescriptionLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -126,16 +127,16 @@
             // 
             this.patientIDComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.patientIDComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.patientIDComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.patientIDComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.patientIDComboBox.DataSource = this.patientInfoBindingSource;
-            this.patientIDComboBox.DisplayMember = "PatientID";
+            this.patientIDComboBox.DisplayMember = "LastName";
             this.patientIDComboBox.FormattingEnabled = true;
             this.patientIDComboBox.Location = new System.Drawing.Point(189, 58);
             this.patientIDComboBox.Name = "patientIDComboBox";
             this.patientIDComboBox.Size = new System.Drawing.Size(319, 21);
             this.patientIDComboBox.TabIndex = 0;
-            this.patientIDComboBox.ValueMember = "PatientID";
+            this.patientIDComboBox.ValueMember = "LastName";
             this.patientIDComboBox.DropDown += new System.EventHandler(this.patientIDComboBox_DropDown);
             this.patientIDComboBox.DropDownClosed += new System.EventHandler(this.patientIDComboBox_DropDownClosed);
             this.patientIDComboBox.SelectedValueChanged += new System.EventHandler(this.patientIDComboBox_SelectedValueChanged);
@@ -358,8 +359,9 @@
             this.textBox1.Location = new System.Drawing.Point(176, 13);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(24, 20);
             this.textBox1.TabIndex = 20;
+            this.textBox1.Visible = false;
             // 
             // linkLabelLogOut
             // 
@@ -384,6 +386,14 @@
             this.linkLabelClearPrescriptions.Text = "Clear Prescription List";
             this.linkLabelClearPrescriptions.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelClearPrescriptions_LinkClicked);
             // 
+            // textBoxID
+            // 
+            this.textBoxID.Location = new System.Drawing.Point(480, 12);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(28, 20);
+            this.textBoxID.TabIndex = 23;
+            this.textBoxID.Visible = false;
+            // 
             // DoctorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,6 +401,7 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(841, 489);
             this.ControlBox = false;
+            this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.linkLabelClearPrescriptions);
             this.Controls.Add(this.linkLabelLogOut);
             this.Controls.Add(this.textBox1);
@@ -453,5 +464,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.LinkLabel linkLabelLogOut;
         private System.Windows.Forms.LinkLabel linkLabelClearPrescriptions;
+        private System.Windows.Forms.TextBox textBoxID;
     }
 }

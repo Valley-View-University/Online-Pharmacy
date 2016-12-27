@@ -33,26 +33,20 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageDoctorInfo = new System.Windows.Forms.TabPage();
             this.doctorInfoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctorInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.oNLINEPHARMACYDataSet = new OnlinePharmacy.ONLINEPHARMACYDataSet();
             this.tabPagePatientInfo = new System.Windows.Forms.TabPage();
             this.patientInfoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPagePharmacyInfo = new System.Windows.Forms.TabPage();
             this.pharmacyInfoDataGridView = new System.Windows.Forms.DataGridView();
+            this.pharmacyIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pharmacyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pharmacyAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pharmacistFullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pharmacyInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPageHospitalInfo = new System.Windows.Forms.TabPage();
             this.hospitalInfoDataGridView = new System.Windows.Forms.DataGridView();
@@ -81,22 +75,28 @@
             this.prescriptionTableTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.PrescriptionTableTableAdapter();
             this.pharmacyInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.PharmacyInfoTableAdapter();
             this.pharmacyInfoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pharmacyIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pharmacyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pharmacyAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pharmacistFullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPageDoctorInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.doctorInfoDataGridView)).BeginInit();
@@ -166,49 +166,6 @@
             this.doctorInfoDataGridView.TabIndex = 0;
             this.doctorInfoDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.doctorInfoDataGridView_CellContentClick);
             // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "DoctorID";
-            this.dataGridViewTextBoxColumn5.HeaderText = "DoctorID";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Hospital_Id";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Hospital_Id";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "FirstName";
-            this.dataGridViewTextBoxColumn8.HeaderText = "FirstName";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "MiddleName";
-            this.dataGridViewTextBoxColumn9.HeaderText = "MiddleName";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "LastName";
-            this.dataGridViewTextBoxColumn10.HeaderText = "LastName";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Username";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Username";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Password";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
             // doctorInfoBindingSource
             // 
             this.doctorInfoBindingSource.DataMember = "DoctorInfo";
@@ -249,43 +206,6 @@
             this.patientInfoDataGridView.TabIndex = 0;
             this.patientInfoDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.patientInfoDataGridView_CellContentClick);
             // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "PatientID";
-            this.dataGridViewTextBoxColumn12.HeaderText = "PatientID";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "FirstName";
-            this.dataGridViewTextBoxColumn13.HeaderText = "FirstName";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "MiddleName";
-            this.dataGridViewTextBoxColumn14.HeaderText = "MiddleName";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "LastName";
-            this.dataGridViewTextBoxColumn15.HeaderText = "LastName";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "PhoneNumber";
-            this.dataGridViewTextBoxColumn16.HeaderText = "PhoneNumber";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "DoctorID";
-            this.dataGridViewTextBoxColumn18.HeaderText = "DoctorID";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // patientInfoBindingSource
             // 
             this.patientInfoBindingSource.DataMember = "PatientInfo";
@@ -319,6 +239,49 @@
             this.pharmacyInfoDataGridView.Name = "pharmacyInfoDataGridView";
             this.pharmacyInfoDataGridView.Size = new System.Drawing.Size(766, 507);
             this.pharmacyInfoDataGridView.TabIndex = 0;
+            // 
+            // pharmacyIDDataGridViewTextBoxColumn
+            // 
+            this.pharmacyIDDataGridViewTextBoxColumn.DataPropertyName = "PharmacyID";
+            this.pharmacyIDDataGridViewTextBoxColumn.HeaderText = "PharmacyID";
+            this.pharmacyIDDataGridViewTextBoxColumn.Name = "pharmacyIDDataGridViewTextBoxColumn";
+            // 
+            // pharmacyNameDataGridViewTextBoxColumn
+            // 
+            this.pharmacyNameDataGridViewTextBoxColumn.DataPropertyName = "PharmacyName";
+            this.pharmacyNameDataGridViewTextBoxColumn.HeaderText = "PharmacyName";
+            this.pharmacyNameDataGridViewTextBoxColumn.Name = "pharmacyNameDataGridViewTextBoxColumn";
+            // 
+            // pharmacyAddressDataGridViewTextBoxColumn
+            // 
+            this.pharmacyAddressDataGridViewTextBoxColumn.DataPropertyName = "PharmacyAddress";
+            this.pharmacyAddressDataGridViewTextBoxColumn.HeaderText = "PharmacyAddress";
+            this.pharmacyAddressDataGridViewTextBoxColumn.Name = "pharmacyAddressDataGridViewTextBoxColumn";
+            this.pharmacyAddressDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // pharmacistFullNameDataGridViewTextBoxColumn
+            // 
+            this.pharmacistFullNameDataGridViewTextBoxColumn.DataPropertyName = "PharmacistFullName";
+            this.pharmacistFullNameDataGridViewTextBoxColumn.HeaderText = "PharmacistFullName";
+            this.pharmacistFullNameDataGridViewTextBoxColumn.Name = "pharmacistFullNameDataGridViewTextBoxColumn";
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "E-mail";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "E-mail";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             // 
             // pharmacyInfoBindingSource
             // 
@@ -374,11 +337,11 @@
             this.prescriptionTableDataGridView.AutoGenerateColumns = false;
             this.prescriptionTableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prescriptionTableDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn23,
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn22,
             this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn23});
+            this.dataGridViewTextBoxColumn21});
             this.prescriptionTableDataGridView.DataSource = this.prescriptionTableBindingSource;
             this.prescriptionTableDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.prescriptionTableDataGridView.Location = new System.Drawing.Point(3, 3);
@@ -557,79 +520,96 @@
             this.pharmacyInfoBindingSource1.DataMember = "PharmacyInfo";
             this.pharmacyInfoBindingSource1.DataSource = this.oNLINEPHARMACYDataSet;
             // 
-            // dataGridViewTextBoxColumn19
+            // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "PatientID";
-            this.dataGridViewTextBoxColumn19.HeaderText = "PatientID";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "DoctorID";
+            this.dataGridViewTextBoxColumn5.HeaderText = "DoctorID";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 70;
             // 
-            // dataGridViewTextBoxColumn22
+            // dataGridViewTextBoxColumn11
             // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "PatientName";
-            this.dataGridViewTextBoxColumn22.HeaderText = "PatientName";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Hospital_Id";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Hospital_Id";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn11.Width = 90;
             // 
-            // dataGridViewTextBoxColumn20
+            // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "AccessCode";
-            this.dataGridViewTextBoxColumn20.HeaderText = "AccessCode";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "FirstName";
+            this.dataGridViewTextBoxColumn8.HeaderText = "FirstName";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 110;
             // 
-            // dataGridViewTextBoxColumn21
+            // dataGridViewTextBoxColumn9
             // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "Prescriptions";
-            this.dataGridViewTextBoxColumn21.HeaderText = "Prescriptions";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.Width = 500;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "MiddleName";
+            this.dataGridViewTextBoxColumn9.HeaderText = "MiddleName";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 110;
             // 
-            // dataGridViewTextBoxColumn23
+            // dataGridViewTextBoxColumn10
             // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "HospitalID";
-            this.dataGridViewTextBoxColumn23.HeaderText = "HospitalID";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "LastName";
+            this.dataGridViewTextBoxColumn10.HeaderText = "LastName";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 115;
             // 
-            // pharmacyIDDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn6
             // 
-            this.pharmacyIDDataGridViewTextBoxColumn.DataPropertyName = "PharmacyID";
-            this.pharmacyIDDataGridViewTextBoxColumn.HeaderText = "PharmacyID";
-            this.pharmacyIDDataGridViewTextBoxColumn.Name = "pharmacyIDDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Username";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Username";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 110;
             // 
-            // pharmacyNameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn7
             // 
-            this.pharmacyNameDataGridViewTextBoxColumn.DataPropertyName = "PharmacyName";
-            this.pharmacyNameDataGridViewTextBoxColumn.HeaderText = "PharmacyName";
-            this.pharmacyNameDataGridViewTextBoxColumn.Name = "pharmacyNameDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Password";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Password";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 110;
             // 
-            // pharmacyAddressDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn12
             // 
-            this.pharmacyAddressDataGridViewTextBoxColumn.DataPropertyName = "PharmacyAddress";
-            this.pharmacyAddressDataGridViewTextBoxColumn.HeaderText = "PharmacyAddress";
-            this.pharmacyAddressDataGridViewTextBoxColumn.Name = "pharmacyAddressDataGridViewTextBoxColumn";
-            this.pharmacyAddressDataGridViewTextBoxColumn.Width = 300;
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "PatientID";
+            this.dataGridViewTextBoxColumn12.HeaderText = "PatientID";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
-            // pharmacistFullNameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn13
             // 
-            this.pharmacistFullNameDataGridViewTextBoxColumn.DataPropertyName = "PharmacistFullName";
-            this.pharmacistFullNameDataGridViewTextBoxColumn.HeaderText = "PharmacistFullName";
-            this.pharmacistFullNameDataGridViewTextBoxColumn.Name = "pharmacistFullNameDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "FirstName";
+            this.dataGridViewTextBoxColumn13.HeaderText = "FirstName";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Width = 110;
             // 
-            // usernameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn14
             // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "MiddleName";
+            this.dataGridViewTextBoxColumn14.HeaderText = "MiddleName";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.Width = 110;
             // 
-            // passwordDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn15
             // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "LastName";
+            this.dataGridViewTextBoxColumn15.HeaderText = "LastName";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.Width = 110;
             // 
-            // emailDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn16
             // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "E-mail";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "E-mail";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "PhoneNumber";
+            this.dataGridViewTextBoxColumn16.HeaderText = "PhoneNumber";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.Width = 120;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "DoctorID";
+            this.dataGridViewTextBoxColumn18.HeaderText = "DoctorID";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -655,6 +635,38 @@
             this.dataGridViewTextBoxColumn4.DataPropertyName = "HospitalPhoneNumber";
             this.dataGridViewTextBoxColumn4.HeaderText = "HospitalPhoneNumber";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "HospitalID";
+            this.dataGridViewTextBoxColumn23.HeaderText = "HospitalID";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "PatientID";
+            this.dataGridViewTextBoxColumn19.HeaderText = "PatientID";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "PatientName";
+            this.dataGridViewTextBoxColumn22.HeaderText = "PatientName";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "AccessCode";
+            this.dataGridViewTextBoxColumn20.HeaderText = "AccessCode";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "Prescriptions";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Prescriptions";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.Width = 500;
             // 
             // Database
             // 
@@ -733,6 +745,15 @@
         private System.Windows.Forms.DataGridView prescriptionTableDataGridView;
         private System.Windows.Forms.BindingSource fKDoctorInfoHospitalInfoBindingSource;
         private ONLINEPHARMACYDataSetTableAdapters.PharmacyInfoTableAdapter pharmacyInfoTableAdapter;
+        private System.Windows.Forms.DataGridView pharmacyInfoDataGridView;
+        private System.Windows.Forms.BindingSource pharmacyInfoBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pharmacyIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pharmacyNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pharmacyAddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pharmacistFullNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
@@ -746,23 +767,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridView pharmacyInfoDataGridView;
-        private System.Windows.Forms.BindingSource pharmacyInfoBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pharmacyIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pharmacyNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pharmacyAddressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pharmacistFullNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
     }
 }

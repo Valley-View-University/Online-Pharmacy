@@ -48,7 +48,7 @@ namespace OnlinePharmacy
             DoctorLogin doclog = new DoctorLogin();
             int ID = int.Parse(textBox1.Text);
             SqlDataAdapter sda = new SqlDataAdapter();
-            string Query = "INSERT INTO PrescriptionTable (PatientID, AccessCode, Prescriptions, PatientName, HospitalID) values('" + patientIDComboBox.Text + "','" + accessIDTextBox.Text + "','" + textBoxPrescriptions.Text + "','" + textBoxPatientName.Text + "','"+ ID +"');";
+            string Query = "INSERT INTO PrescriptionTable (PatientID, AccessCode, Prescriptions, PatientName, HospitalID) values('" + textBoxID.Text + "','" + accessIDTextBox.Text + "','" + textBoxPrescriptions.Text + "','" + textBoxPatientName.Text + "','"+ ID +"');";
             try
             {
                 SqlCommand cmd = new SqlCommand(Query, con);
@@ -76,7 +76,7 @@ namespace OnlinePharmacy
         private void patientIDComboBox_DropDown(object sender, EventArgs e)
         {
             //patientIDComboBox.Items.Clear();
-            String query = "SELECT PatientID FROM PatientInfo";
+            String query = "SELECT LastName FROM PatientInfo";
 
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
@@ -176,7 +176,7 @@ namespace OnlinePharmacy
 
         private void patientIDComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
-            string Query = "SELECT FirstName, MiddleName, LastName FROM PatientInfo WHERE PatientID = '" + patientIDComboBox.Text + "';";
+            string Query = "SELECT PatientID, FirstName, MiddleName, LastName FROM PatientInfo WHERE LastName = '" + patientIDComboBox.Text + "';";
 
             try {
                 con.Open();
@@ -186,6 +186,7 @@ namespace OnlinePharmacy
                 while (dr.Read())
                 {
                     textBoxPatientName.Text = dr["LastName"].ToString() +" "+ dr["FirstName"].ToString() + " " + dr["MiddleName"].ToString();
+                    textBoxID.Text = dr["PatientID"].ToString();
                 }
             }
             catch(Exception ex) { MessageBox.Show(ex.Message); }
