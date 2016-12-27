@@ -100,6 +100,7 @@ namespace OnlinePharmacy
 
         private void linkLabelAddDrug_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            
             string meal = "", time = "";
             if (!radbtnBeforeMeals.Checked && !radbtnAfterMeals.Checked || (!chkbxMorning.Checked && !chkbxAfternoon.Checked && !chkbxEvening.Checked))
             {

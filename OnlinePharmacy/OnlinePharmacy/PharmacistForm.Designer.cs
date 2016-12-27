@@ -65,6 +65,7 @@
             this.textBoxCodeVerify.Name = "textBoxCodeVerify";
             this.textBoxCodeVerify.Size = new System.Drawing.Size(238, 29);
             this.textBoxCodeVerify.TabIndex = 0;
+            this.textBoxCodeVerify.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -120,6 +121,7 @@
             // 
             // PharmacistForm
             // 
+            this.AcceptButton = this.buttonVerify;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
