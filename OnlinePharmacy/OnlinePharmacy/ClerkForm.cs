@@ -39,7 +39,8 @@ namespace OnlinePharmacy
                     while (myReader.Read()) { }
                     
                     MessageBox.Show("Login Successful.");
-                    panelLogin.Hide();
+                    textBoxPassword.Clear();textBoxUsername.Clear();
+                    panelLogin.Visible = false;panel1.Show();
                 }
                 else
                 {
@@ -83,9 +84,28 @@ namespace OnlinePharmacy
 
         private void ClerkForm_Load(object sender, EventArgs e)
         {
+            panelLogin.Show();panel1.Hide();
+            // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.DoctorInfo' table. You can move, or remove it, as needed.
+            this.doctorInfoTableAdapter.Fill(this.oNLINEPHARMACYDataSet.DoctorInfo);
             // TODO: This line of code loads data into the 'oNLINEPHARMACYDataSet.PatientInfo' table. You can move, or remove it, as needed.
             this.patientInfoTableAdapter.Fill(this.oNLINEPHARMACYDataSet.PatientInfo);
 
+        }
+
+        
+
+        private void linkLabelLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                panel1.Hide();panelLogin.Show();
+            }
+        }
+
+        private void linkLabelClear_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            patientIDTextBox.Clear(); firstNameTextBox.Clear(); middleNameTextBox.Clear(); lastNameTextBox.Clear(); phoneNumberTextBox.Clear();
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -110,6 +130,132 @@ namespace OnlinePharmacy
                 catch (Exception ex) { MessageBox.Show(ex.Message); }
                 finally { con.Close(); }
             }
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM PatientInfo WHERE PatientID ='" + textBoxSearch.Text + "'", con);
+            string Query = "UPDATE PatientInfo SET FirstName ='" + firstNameTextBox.Text + "', MiddleName = '" + middleNameTextBox.Text + "', LastName = '" + lastNameTextBox.Text + "', PhoneNumber = '" + phoneNumberTextBox.Text + "', DoctorID = '" + doctorIDComboBox.Text + "' WHERE PatientID ='" + patientIDTextBox.Text + "';";
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows.Count == 1)
+                {
+                    SqlCommand cmd = new SqlCommand(Query, con);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+
+                    }
+                    MessageBox.Show("Record Updated");
+                    textBoxResult.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("No Results found");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { con.Close(); }
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM PatientInfo WHERE PatientID ='" + textBoxSearch.Text + "'", con);
+            string Query = "DELETE FROM PatientInfo WHERE PatientID ='" + textBoxSearch.Text + "';";
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows.Count == 1)
+                {
+                    DialogResult result = MessageBox.Show("Delete Record?", "Confirmation", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        DialogResult result1 = MessageBox.Show("Are you sure? This cannot be Undone?", "Confirmation", MessageBoxButtons.YesNo);
+                        if (result1 == DialogResult.Yes)
+                        {
+                            SqlCommand cmd = new SqlCommand(Query, con);
+                            SqlDataReader dr = cmd.ExecuteReader();
+                            while (dr.Read()) { }
+                            MessageBox.Show("Record Deleted");
+                            textBoxResult.Clear();
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No Results found");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { con.Close(); }
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            textBoxResult.Clear();
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM PatientInfo WHERE PatientID ='" + textBoxSearch.Text + "'", con);
+            string Query = "SELECT * FROM PatientInfo WHERE PatientID ='" + textBoxSearch.Text + "';";
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows.Count == 1)
+                {
+                    MessageBox.Show("Search Successful");
+                }
+                else
+                {
+                    MessageBox.Show("No Results found");
+                }
+                SqlCommand cmd = new SqlCommand(Query, con);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    textBoxResult.AppendText(Environment.NewLine + ("PATIENT ID:\t\t" + dr["PatientID"].ToString()));
+                    textBoxResult.AppendText(Environment.NewLine + ("PATIENT NAME:\t\t" + dr["LastName"].ToString() + " " + dr["FirstName"].ToString() + " " + dr["MiddleName"].ToString()));
+                    textBoxResult.AppendText(Environment.NewLine + ("PHONE NUMBER:\t\t" + dr["PhoneNumber"].ToString()));
+                    textBoxResult.AppendText(Environment.NewLine + ("DOCTOR ID:\t\t" + dr["DoctorID"].ToString()));
+
+                    patientIDTextBox.Text = dr["PatientID"].ToString();
+                    firstNameTextBox.Text = dr["FirstName"].ToString();
+                    middleNameTextBox.Text = dr["MiddleName"].ToString();
+                    lastNameTextBox.Text = dr["LastName"].ToString();
+                    phoneNumberTextBox.Text = dr["PhoneNumber"].ToString();
+                    doctorIDComboBox.Text = dr["DoctorID"].ToString();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { con.Close(); }
+        }
+
+        private void linkLabelDatabase_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Database db = new Database();
+            Hide();
+            db.ShowDialog();
+            Show();
+        }
+
+        private void linkLabelClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Close();
         }
     }
 }
