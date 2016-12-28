@@ -116,7 +116,9 @@ namespace OnlinePharmacy
                 if (chkbxEvening.Checked) { time = chkbxEvening.Text; }
 
                 if (chkbxMorning.Checked && chkbxAfternoon.Checked) { time = chkbxMorning.Text + ", " + chkbxAfternoon.Text; }
-                if (chkbxEvening.Checked && chkbxAfternoon.Checked && chkbxEvening.Checked) { time = (chkbxMorning.Text + ", " + chkbxAfternoon.Text + ", " + chkbxEvening.Text); }
+                if(chkbxEvening.Checked && chkbxAfternoon.Checked) { time = chkbxAfternoon.Text + ", " + chkbxEvening.Text; }
+                if (chkbxMorning.Checked && chkbxEvening.Checked) { time = chkbxMorning.Text + ", " + chkbxEvening.Text; }
+                if (chkbxMorning.Checked && chkbxAfternoon.Checked && chkbxEvening.Checked) { time = (chkbxMorning.Text + ", " + chkbxAfternoon.Text + ", " + chkbxEvening.Text); }
 
                 if (string.IsNullOrWhiteSpace(comboBoxDrugs.Text)) { MessageBox.Show("Select Drug"); }
                 else
@@ -125,7 +127,7 @@ namespace OnlinePharmacy
                     else
                     {
                         list.Add(comboBoxDrugs.Text);
-                        textBoxPrescriptions.AppendText(comboBoxDrugs.Text + ",\t\t " + meal + ",\t\t " + time + Environment.NewLine);
+                        textBoxPrescriptions.AppendText(comboBoxDrugs.Text + ", \t\t\t" + meal + ", \t\t" + time + Environment.NewLine);
                     }
                 }
             }
@@ -144,7 +146,8 @@ namespace OnlinePharmacy
 
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
-            SqlDataReader dr = cmd.ExecuteReader();
+            SqlDataReader dr = cmd.ExecuteReader();7
+
 
             while (dr.Read())
             {

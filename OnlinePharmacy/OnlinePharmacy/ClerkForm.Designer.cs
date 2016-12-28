@@ -37,6 +37,7 @@
             System.Windows.Forms.Label doctorIDLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClerkForm));
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.linkLabelClose = new System.Windows.Forms.LinkLabel();
             this.labelErrorMessage = new System.Windows.Forms.Label();
             this.LogInButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
@@ -63,6 +64,7 @@
             this.doctorInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.doctorInfoTableAdapter = new OnlinePharmacy.ONLINEPHARMACYDataSetTableAdapters.DoctorInfoTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabelLogout = new System.Windows.Forms.LinkLabel();
             this.linkLabelDatabase = new System.Windows.Forms.LinkLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.patientIDTextBox = new System.Windows.Forms.TextBox();
@@ -80,8 +82,6 @@
             this.textBoxResult = new System.Windows.Forms.TextBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.linkLabelLogout = new System.Windows.Forms.LinkLabel();
-            this.linkLabelClose = new System.Windows.Forms.LinkLabel();
             patientIDLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
             middleNameLabel = new System.Windows.Forms.Label();
@@ -167,6 +167,18 @@
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(867, 668);
             this.panelLogin.TabIndex = 0;
+            // 
+            // linkLabelClose
+            // 
+            this.linkLabelClose.AutoSize = true;
+            this.linkLabelClose.LinkColor = System.Drawing.Color.Black;
+            this.linkLabelClose.Location = new System.Drawing.Point(809, 9);
+            this.linkLabelClose.Name = "linkLabelClose";
+            this.linkLabelClose.Size = new System.Drawing.Size(42, 13);
+            this.linkLabelClose.TabIndex = 6;
+            this.linkLabelClose.TabStop = true;
+            this.linkLabelClose.Text = "CLOSE";
+            this.linkLabelClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelClose_LinkClicked);
             // 
             // labelErrorMessage
             // 
@@ -426,6 +438,17 @@
             this.panel1.Size = new System.Drawing.Size(867, 434);
             this.panel1.TabIndex = 17;
             // 
+            // linkLabelLogout
+            // 
+            this.linkLabelLogout.AutoSize = true;
+            this.linkLabelLogout.Location = new System.Drawing.Point(12, 9);
+            this.linkLabelLogout.Name = "linkLabelLogout";
+            this.linkLabelLogout.Size = new System.Drawing.Size(43, 13);
+            this.linkLabelLogout.TabIndex = 21;
+            this.linkLabelLogout.TabStop = true;
+            this.linkLabelLogout.Text = "Log out";
+            this.linkLabelLogout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLogout_LinkClicked);
+            // 
             // linkLabelDatabase
             // 
             this.linkLabelDatabase.AutoSize = true;
@@ -504,14 +527,11 @@
             // doctorIDComboBox
             // 
             this.doctorIDComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientInfoBindingSource, "DoctorID", true));
-            this.doctorIDComboBox.DataSource = this.doctorInfoBindingSource;
-            this.doctorIDComboBox.DisplayMember = "DoctorID";
             this.doctorIDComboBox.FormattingEnabled = true;
             this.doctorIDComboBox.Location = new System.Drawing.Point(136, 209);
             this.doctorIDComboBox.Name = "doctorIDComboBox";
             this.doctorIDComboBox.Size = new System.Drawing.Size(197, 21);
             this.doctorIDComboBox.TabIndex = 19;
-            this.doctorIDComboBox.ValueMember = "DoctorID";
             // 
             // linkLabelClear
             // 
@@ -602,29 +622,6 @@
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
-            // 
-            // linkLabelLogout
-            // 
-            this.linkLabelLogout.AutoSize = true;
-            this.linkLabelLogout.Location = new System.Drawing.Point(12, 9);
-            this.linkLabelLogout.Name = "linkLabelLogout";
-            this.linkLabelLogout.Size = new System.Drawing.Size(43, 13);
-            this.linkLabelLogout.TabIndex = 21;
-            this.linkLabelLogout.TabStop = true;
-            this.linkLabelLogout.Text = "Log out";
-            this.linkLabelLogout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLogout_LinkClicked);
-            // 
-            // linkLabelClose
-            // 
-            this.linkLabelClose.AutoSize = true;
-            this.linkLabelClose.LinkColor = System.Drawing.Color.Black;
-            this.linkLabelClose.Location = new System.Drawing.Point(809, 9);
-            this.linkLabelClose.Name = "linkLabelClose";
-            this.linkLabelClose.Size = new System.Drawing.Size(42, 13);
-            this.linkLabelClose.TabIndex = 6;
-            this.linkLabelClose.TabStop = true;
-            this.linkLabelClose.Text = "CLOSE";
-            this.linkLabelClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelClose_LinkClicked);
             // 
             // ClerkForm
             // 
