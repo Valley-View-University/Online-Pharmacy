@@ -122,9 +122,13 @@ namespace OnlinePharmacy
                 try
                 {
                     con.Open();
-                    myReader = cmd.ExecuteReader();
-                    MessageBox.Show("Information Saved");
-                    while (myReader.Read()) { }
+                    DialogResult result = MessageBox.Show("Are you sure you want to add this record?", "Confirmation", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        myReader = cmd.ExecuteReader();
+                        MessageBox.Show("Information Saved");
+                        while (myReader.Read()) { }
+                    }
                     con.Close();
                 }
                 catch (Exception ex) { MessageBox.Show(ex.Message); }
@@ -143,13 +147,17 @@ namespace OnlinePharmacy
                 sda.Fill(dt);
                 if (dt.Rows.Count == 1)
                 {
-                    SqlCommand cmd = new SqlCommand(Query, con);
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    while (dr.Read())
+                    DialogResult result = MessageBox.Show("Are you sure you want to update this record with this information?", "Confirmation", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
                     {
+                        SqlCommand cmd = new SqlCommand(Query, con);
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        while (dr.Read())
+                        {
 
+                        }
+                        MessageBox.Show("Record Updated");
                     }
-                    MessageBox.Show("Record Updated");
                     textBoxResult.Clear();
                 }
                 else
