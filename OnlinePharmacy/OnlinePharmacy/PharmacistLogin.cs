@@ -22,11 +22,7 @@ namespace OnlinePharmacy
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            DoctorLogin dl = new DoctorLogin();
-            Hide();
-            dl.ShowDialog();
-            Show();
-        }
+             }
 
         private void buttonLogin_Click_1(object sender, EventArgs e)
         {
@@ -76,6 +72,14 @@ namespace OnlinePharmacy
             {
                 Close();
             }
+        }
+
+        private void linkLabelMoreInfoOptions_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MoreOptions mo = new MoreOptions();
+            Hide();
+            mo.ShowDialog();
+            Show();
         }
     }
 }

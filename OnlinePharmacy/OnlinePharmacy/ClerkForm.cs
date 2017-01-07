@@ -263,7 +263,19 @@ namespace OnlinePharmacy
 
         private void linkLabelClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Close();
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
+
+        private void linkLabelMoreInfoOptions_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MoreOptions mo = new MoreOptions();
+            Hide();
+            mo.ShowDialog();
+            Show();
         }
     }
 }

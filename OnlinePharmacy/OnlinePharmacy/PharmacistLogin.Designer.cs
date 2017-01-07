@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.linkLabelDocLogin = new System.Windows.Forms.LinkLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.textBoxPhUsername = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -36,18 +35,8 @@
             this.buttonLogin = new MaterialSkin.Controls.MaterialRaisedButton();
             this.labelErrorMessage = new System.Windows.Forms.Label();
             this.linkLabelClose = new System.Windows.Forms.LinkLabel();
+            this.linkLabelMoreInfoOptions = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
-            // 
-            // linkLabelDocLogin
-            // 
-            this.linkLabelDocLogin.AutoSize = true;
-            this.linkLabelDocLogin.Location = new System.Drawing.Point(316, 359);
-            this.linkLabelDocLogin.Name = "linkLabelDocLogin";
-            this.linkLabelDocLogin.Size = new System.Drawing.Size(68, 13);
-            this.linkLabelDocLogin.TabIndex = 3;
-            this.linkLabelDocLogin.TabStop = true;
-            this.linkLabelDocLogin.Text = "Doctor Login";
-            this.linkLabelDocLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // materialLabel1
             // 
@@ -141,12 +130,26 @@
             this.linkLabelClose.Text = "Close";
             this.linkLabelClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelClose_LinkClicked);
             // 
+            // linkLabelMoreInfoOptions
+            // 
+            this.linkLabelMoreInfoOptions.AutoSize = true;
+            this.linkLabelMoreInfoOptions.Location = new System.Drawing.Point(251, 371);
+            this.linkLabelMoreInfoOptions.Name = "linkLabelMoreInfoOptions";
+            this.linkLabelMoreInfoOptions.Size = new System.Drawing.Size(145, 13);
+            this.linkLabelMoreInfoOptions.TabIndex = 12;
+            this.linkLabelMoreInfoOptions.TabStop = true;
+            this.linkLabelMoreInfoOptions.Text = "More information and Options";
+            this.linkLabelMoreInfoOptions.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMoreInfoOptions_LinkClicked);
+            // 
             // PharmacistLogin
             // 
+            this.AcceptButton = this.buttonLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.linkLabelClose;
             this.ClientSize = new System.Drawing.Size(408, 393);
             this.ControlBox = false;
+            this.Controls.Add(this.linkLabelMoreInfoOptions);
             this.Controls.Add(this.linkLabelClose);
             this.Controls.Add(this.labelErrorMessage);
             this.Controls.Add(this.buttonLogin);
@@ -154,7 +157,6 @@
             this.Controls.Add(this.textBoxPhUsername);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.linkLabelDocLogin);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -169,7 +171,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.LinkLabel linkLabelDocLogin;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialSingleLineTextField textBoxPhUsername;
@@ -177,5 +178,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton buttonLogin;
         private System.Windows.Forms.Label labelErrorMessage;
         private System.Windows.Forms.LinkLabel linkLabelClose;
+        private System.Windows.Forms.LinkLabel linkLabelMoreInfoOptions;
     }
 }

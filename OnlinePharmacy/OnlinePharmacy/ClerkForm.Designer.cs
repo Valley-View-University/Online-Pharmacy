@@ -82,6 +82,7 @@
             this.textBoxResult = new System.Windows.Forms.TextBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
+            this.linkLabelMoreInfoOptions = new System.Windows.Forms.LinkLabel();
             patientIDLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
             middleNameLabel = new System.Windows.Forms.Label();
@@ -156,6 +157,7 @@
             // panelLogin
             // 
             this.panelLogin.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panelLogin.Controls.Add(this.linkLabelMoreInfoOptions);
             this.panelLogin.Controls.Add(this.linkLabelClose);
             this.panelLogin.Controls.Add(this.labelErrorMessage);
             this.panelLogin.Controls.Add(this.LogInButton);
@@ -623,6 +625,17 @@
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
+            // linkLabelMoreInfoOptions
+            // 
+            this.linkLabelMoreInfoOptions.AutoSize = true;
+            this.linkLabelMoreInfoOptions.Location = new System.Drawing.Point(11, 9);
+            this.linkLabelMoreInfoOptions.Name = "linkLabelMoreInfoOptions";
+            this.linkLabelMoreInfoOptions.Size = new System.Drawing.Size(145, 13);
+            this.linkLabelMoreInfoOptions.TabIndex = 22;
+            this.linkLabelMoreInfoOptions.TabStop = true;
+            this.linkLabelMoreInfoOptions.Text = "More information and Options";
+            this.linkLabelMoreInfoOptions.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMoreInfoOptions_LinkClicked);
+            // 
             // ClerkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -701,5 +714,6 @@
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.LinkLabel linkLabelLogout;
         private System.Windows.Forms.LinkLabel linkLabelClose;
+        private System.Windows.Forms.LinkLabel linkLabelMoreInfoOptions;
     }
 }
