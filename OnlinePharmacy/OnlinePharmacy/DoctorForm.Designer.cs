@@ -478,11 +478,11 @@
             // 
             this.textBoxPatientInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPatientInfo.Location = new System.Drawing.Point(620, 79);
+            this.textBoxPatientInfo.Location = new System.Drawing.Point(598, 79);
             this.textBoxPatientInfo.Multiline = true;
             this.textBoxPatientInfo.Name = "textBoxPatientInfo";
             this.textBoxPatientInfo.ReadOnly = true;
-            this.textBoxPatientInfo.Size = new System.Drawing.Size(212, 199);
+            this.textBoxPatientInfo.Size = new System.Drawing.Size(234, 199);
             this.textBoxPatientInfo.TabIndex = 2;
             // 
             // chkbxMorning

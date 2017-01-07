@@ -162,25 +162,12 @@ namespace OnlinePharmacy
         {
             string randomvalue = RandomString(8);
             accessIDTextBox.Text = randomvalue;
-            /*string query = "DELETE TOP(1) FROM PrescriptionTable WHERE PatientID = 1";
-            try
-            {
-                con.Open();
-                SqlCommand cmd = new SqlCommand(query, con);
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                while (dr.Read())
-                {
-                    
-                }
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-            finally { con.Close(); }*/
         }
 
         private void patientIDComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
-            string Query = "SELECT PatientID, FirstName, MiddleName, LastName FROM PatientInfo WHERE LastName = '" + patientIDComboBox.Text + "';";
+            textBoxPatientInfo.Clear();
+            string Query = "SELECT * FROM PatientInfo WHERE LastName = '" + patientIDComboBox.Text + "';";
 
             try {
                 con.Open();
@@ -191,6 +178,10 @@ namespace OnlinePharmacy
                 {
                     textBoxPatientName.Text = dr["LastName"].ToString() +" "+ dr["FirstName"].ToString() + " " + dr["MiddleName"].ToString();
                     textBoxID.Text = dr["PatientID"].ToString();
+
+                    textBoxPatientInfo.AppendText(Environment.NewLine + Environment.NewLine + "Patient  ID: " + dr["PatientID"].ToString());
+                    textBoxPatientInfo.AppendText(Environment.NewLine + Environment.NewLine + "Patient  Name: " + dr["LastName"].ToString() + " " + dr["FirstName"].ToString() + " " + dr["MiddleName"].ToString());
+                    textBoxPatientInfo.AppendText(Environment.NewLine + Environment.NewLine + "Patient  PhoneNumber: " + dr["PhoneNumber"].ToString());
                 }
             }
             catch(Exception ex) { MessageBox.Show(ex.Message); }
